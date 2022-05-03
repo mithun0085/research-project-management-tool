@@ -15,10 +15,7 @@ app.use(cors())
 app.use(fileUpload({
     useTempFiles:true
 }))
-app.use('/user', require('./routers/userRouter'))
-app.use('/api', require('./routers/categoryRouter'))
-app.use('/api', require('./routers/productRouter'))
-app.use('/api', require('./routers/upload'))
+
 
 
 const PORT = process.env.PORT || 8070;
@@ -36,15 +33,17 @@ connection.once("open", () => {
 
 
 
-const staffRoute = require('./routes/staffs');//path to method 
+
 app.use(bodyParser.json());//bodyparser midleware
-app.use(staffRoute);
+
 
 const logresRoute = require('./routes/logres');
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(logresRoute);
 
+const staffRoute = require('./routes/staffs');//path to method 
+app.use(staffRoute); 
 
 const customersRoute = require('./routes/customers');
 app.use(customersRoute);
@@ -55,14 +54,8 @@ app.use(employeesRoute);
 const suppliersRoute = require('./routes/suppliers');
 app.use(suppliersRoute);
 
-const suppliersNaviRoute = require('./routes/suppliersnavi');
-app.use(suppliersNaviRoute);
 
-const postsRoute = require('./routes/posts');
-app.use(postsRoute);
 
-const postsSerRoute = require('./routes/postsSer');
-app.use(postsSerRoute);
 
 
 

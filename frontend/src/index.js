@@ -5,10 +5,11 @@ import './index.css';
 import App from './App';
 import App2 from './App2';
 import AppPayment from './AppPayment';
+
+
 import reportWebVitals from './reportWebVitals';
-import AppSuppliers from './AppSuppliers';
-import AppPerformance from './AppPerformance';
-import AppService from './AppService';
+
+
 
 
 
@@ -18,10 +19,8 @@ ReactDOM.render(
     <App2/>
     <App/>
     <AppPayment/>
-    <AppSuppliers/>
-    <AppPerformance/>
-    <AppService/>
  
+    
     
   </React.StrictMode>,
   document.getElementById('root')

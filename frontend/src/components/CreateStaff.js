@@ -15,9 +15,9 @@ constructor(props){
         email:"",
         address:"",
         contactNo:"",
-        password:"",
-        emailError:"",
-        nameError:""
+        password:""
+    
+
     }
 }
 
@@ -31,27 +31,10 @@ constructor(props){
     })
     }
     
-    validate = ()=>{
-        let emailError="";
-        let nameError="";
-        
-        if (this.state.name.includes('@', "1", "2", "3", "4", "5", "6", "7", "8","9","0")){
-            nameError='Invalid name. Please use words only, Do not use symbols and numbers';
-            }
-        if (!this.state.email.includes('@')){
-                emailError='Invalid email. Valid email must have @ symbol';
-        }
-        if (emailError || nameError){
-            this.setState({emailError, nameError});
-            return false;
-        }
-        return true;
-    }
     onSubmit = (e) =>{ 
 
         e.preventDefault();
-         const isValid = this.validate();
-        const{name,role,age,gender,email,address,contactNo,password} = this.state;
+         const{name,role,age,gender,email,address,contactNo,password} = this.state;
 
          const data = {
             name:name,
@@ -64,7 +47,7 @@ constructor(props){
             password:password
 
          }
-         if (isValid) {
+
          console.log(data)
         
          axios.post("/staffs/save",data).then((res) =>{ 
@@ -85,7 +68,6 @@ constructor(props){
                  )
              }
          })
-        }
     }
     
     render(){
@@ -107,10 +89,6 @@ constructor(props){
                            <label style={{marginBottom:'5px'}} class="form-label"><b>Name</b></label>
                             <input type="text" className="form-control" name="name" 
                             value={this.state.name} onChange={this.handleInputChange}/>
-                         <div style={{ fontSize:12, color:"red"}}>
-                               {this.state.nameError}
-                                
-                                </div>
                         </div>
 
                         <div className="form-group" style={{marginBottom:'15px'}}>
@@ -135,13 +113,6 @@ constructor(props){
                            <label style={{marginBottom:'5px'}} class="form-label"><b>Email</b></label>
                             <input type="text" className="form-control" name="email" 
                             value={this.state.email} onChange={this.handleInputChange}/>
-
-                         
-                           <div style={{ fontSize:12, color:"red"}}>
-                               {this.state.emailError}
-                                
-                                </div>
-                                  
                         </div>
 
                         <div className="form-group" style={{marginBottom:'15px'}}>

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import axios from 'axios'; //import axios package
-import jsPDF from "jspdf";
 
 export default class Home extends Component{
 constructor(props){
@@ -11,15 +10,6 @@ constructor(props){
     staffs:[] 
   };
 }
-
-GeneratePDF =()=>{
-  var doc = new jsPDF("p", "pt", "a3", "pdf");
-  doc.html(document.querySelector('#content'),{
-         callback: function(pdf){
-             pdf.save("staff.pdf");
-         }
-  });
-};
 
 
 componentDidMount(){
@@ -90,7 +80,7 @@ render(){
              
       </div>
       <form style={{textDecoration:'none',backgroundColor:'#EEEEEE',}}>
-        <table id="content" className="table table-hover" style={{marginTop:'40px'}}> 
+        <table className="table table-hover" style={{marginTop:'40px'}}> 
           <thead>
             <tr>
               <th scope="col">No</th>
@@ -111,7 +101,7 @@ render(){
                   <th scope="row">{index+1}</th>  
                   <td>
                       
-                      <a href = {`/staff/${staffs._id}`} style={{textDecoration:'none'}}>
+                      <a href = {`/staffs/${staffs._id}`} style={{textDecoration:'none'}}>
                       {staffs.name}
                       </a>
                   
@@ -143,10 +133,8 @@ render(){
          <button className="btn btn-dark"><a href ="/add" style={{textDecoration:'none',fontSize:'1.25rem' ,padding: '4rem', margin: '0.5rem 0',border:'2px', borderRadius: '8px',color:'white'}}>Create A New Administrative User</a></button>
          <br></br>
          <br></br>
-         <button className="btn btn-dark"><a href ="/staffPay" style={{textDecoration:'none',fontSize:'1.25rem' ,padding: '4rem', margin: '0.5rem 0',border:'2px', borderRadius: '8px',color:'white'}}>Staff Payment Summary</a></button>
-         <br></br>
-         <br></br>
-         <button className="btn btn-dark" style={{textDecoration:'none',backgroundColor:'#fc0703', fontSize:'1.25rem' ,padding: '0.5rem', margin: '0.5rem 0',border:'2px', borderRadius: '8px',color:'white'}} onClick={this.GeneratePDF} type="primary">Create pdf</button>
+         
+         
         </div>
         
        

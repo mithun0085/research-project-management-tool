@@ -27,23 +27,19 @@ export default class SalaryDetails extends Component{
     }
     render(){
 
-        const {Name,Basicsalary,OT,Vehicleallowance,Totaladdition,Transport,Personaltel,Totaldeduction,Netsalary} = this.state.salary;
+        const {Paymentid,Basicsalary,OT,Vehicleallowance,Bonus,Insurance,Transport,Netsalary} = this.state.salary;
         return(
 
-            <div className="background3">
-                
-                  <div style={{marginTop:'20px' }}>
-                    <h4 className="textcenter" style={{marginTop:'40px' ,backgroundColor:'black' , color:'white', padding:'30px'}}>Employee Payment Profile</h4>
+            <div className="backgroun3">
+
+ <div style={{marginTop:'20px' }}>
+                    <h4 className="textcenter" >Employee Payment Profile</h4>
                 
                      <hr/>
-                      <table className="table table-hover" style={{marginTop:'40px'}}> 
-                        <tr>
-                            
-                    
-                          <th scope="col"style={{textAlign:'right'}}>Employee Name :</th>
-                          <th>{Name}</th>
-                        </tr>
-                      </table>
+
+                     <img height="300px" width="300px" style={{borderRadius:'50px' , display:'block',marginLeft:'auto', marginRight:'auto'}} src={'/static/images/user.jpg'}/>
+
+                      <p style={{textAlign:'center'}}>Payment ID:  {Paymentid}</p>
 
                 <center>
       
@@ -71,34 +67,27 @@ export default class SalaryDetails extends Component{
          
          
           <tr>
-             < td class="th1" style={{backgroundColor:'	gainsboro'}}>Total Addition</td>
-              <td class = "geeks" class="th1"  style={{backgroundColor:'	gainsboro'}}>{Totaladdition}</td>
+             < td class="th1">Bonus</td>
+              <td class = "geeks" class="th1">{Bonus}</td>
           </tr>
          
          
          
           <tr>
-             < td class="th1">Transport Charges</td>
+             < td class="th1">Insurance</td>
+              <td class = "geeks" class="th1">{Insurance}</td>
+          </tr>
+         
+         
+         
+          <tr>
+             < td class="th1">Transport</td>
               <td class = "geeks" class="th1">{Transport}</td>
           </tr>
          
          
          
-          <tr>
-             < td class="th1">Telephone Charges</td>
-              <td class = "geeks" class="th1">{Personaltel}</td>
-          </tr>
-         
-         
-         
-          <tr>
-             < td class="th1"  style={{backgroundColor:'	gainsboro'}}>Total Deduction</td>
-              <td class = "geeks" class="th1"  style={{backgroundColor:'	gainsboro'}}>{Totaldeduction}</td>
-          </tr>
-         
-         
-         
-          <tr>
+         <tr>
              < td class="th1" style={{backgroundColor:' 	silver'}}>Net Salary</td>
               <td class = "geeks" class="th1" style={{backgroundColor:' 	silver'}}>{Netsalary}</td>
           </tr>
@@ -115,25 +104,6 @@ export default class SalaryDetails extends Component{
    }
      
      
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

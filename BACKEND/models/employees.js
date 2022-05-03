@@ -43,3 +43,6 @@ const employeeSchema = mongoose.Schema({
 
 
 module.exports = mongoose.model("EmployeePayment",employeeSchema )
+
+
+       

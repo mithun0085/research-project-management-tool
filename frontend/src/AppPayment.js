@@ -12,6 +12,8 @@ import EditSupplierPayment from './paymentManagement/components/EditSupplierPaym
 import SupplierPaymentDetails from './paymentManagement/components/SupplierPaymentDetails';
 import SupplierPayment from './paymentManagement/components/SupplierPayment';
 import CustomerPayment from './paymentManagement/components/CustomerPayment';
+import EmployeePaymentCalculation from './paymentManagement/components/EmployeePaymentCalculation';
+import SupplierPaymentCalculation from './paymentManagement/components/SupplierPaymentCalculation';
 
 
 
@@ -26,11 +28,13 @@ export default class AppPayment extends Component{
         <Route path="/addSalary" component ={InsertSalary}></Route>
         <Route path="/editSalary/:id" component ={EditSalary}></Route>
         <Route path="/salary/:id" component ={SalaryDetails}></Route>
+        <Route path="/employeepaymentcalculation" component={EmployeePaymentCalculation}></Route>
         <Route path="/about" component={about}></Route>
         <Route path="/insertsupplierpayment" component={InsertSupplierPayment}></Route>
         <Route path="/editsupplierpayment/:id" component={EditSupplierPayment}></Route>
         <Route path="/supplierpaymentdetails/:id" component={SupplierPaymentDetails}></Route>
         <Route path="/supplierpayment" component={SupplierPayment}></Route>
+        <Route path="/supplierpaymentcalculation" component={SupplierPaymentCalculation}></Route>
         <Route path="/customerpayment" component={CustomerPayment}></Route>
         
 

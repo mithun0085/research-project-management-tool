@@ -57,7 +57,7 @@ handleSearchArea=(e) =>{
 
 render(){ 
     return(
-      <div className ="backgroun3">
+      <div style={{backgroundColor:'GhostWhite'}}>
       <div className ="container">
       <div className="row">
         
@@ -68,18 +68,32 @@ render(){
            <h4>Employee Payment Management</h4>
        </div>
        <hr/>
-
+     
         <div className="col-lg-3 mt-2 mb-2">
+          
         <input
-           className = "from-control" type="search" placeholder="Search" name="searchQuery" onChange={this.handleSearchArea}>
+           className = "from-control"  style={{width:'400px', height:'40px',backgroundColor:'white'}}type="search" placeholder="Search" name="searchQuery" onChange={this.handleSearchArea}>
              </input>
+            
              </div>
-             
+           
       </div>
-        <table className="table table-hover" style={{marginTop:'40px'}} > 
+
+
+
+      <div style={{marginTop:'20px' }}>
+     
+        <button class="btn" type="button" class="btn btn-primary" style={{marginBottom:'10px' ,padding: "12px",color:'white'}}><i class="fa fa-folder"></i><a href = "/employeepaymentcalculation"  style={{textDecoration:'none', color:'white'}}>Employee Payment Summary</a></button>
+        
+       
+        </div>
+
+      
+<center>
+        <table id="customers" className="table table-hover" style={{marginTop:'40px',backgroundColor:'white'}} > 
           <thead>
-            <tr style={{backgroundColor:'blue',color:'white'}}>
-            <th scope="col">#</th>
+            <tr >
+            <th scope="col">Index</th>
               <th scope="col">Employee Name</th>
               <th scope="col">Employee Role</th>
              
@@ -89,7 +103,7 @@ render(){
 
           <tbody>
               {this.state.salaries.map((salaries,index)=>( //used salaries array variable
-                <tr key={index} style={{backgroundColor:'lightblue'}}>
+                <tr key={index} style={{}}>
                   <th scope="row">{index+1}</th>  
                   <td>
                       
@@ -103,26 +117,50 @@ render(){
                   
                   <td>
 
-                    <a className="btn btn-outline-success" href="/addSalary">
+                    <a className="btn3 button3" href="/addSalary">
                     <i className = "fas fa-edit"></i>&nbsp;Insert
                     </a>
                      &nbsp;
                     
                   </td>
 
-                </tr>
-               ) )}
+                  
 
-          </tbody>
+                </tr> 
+                
+                
+                
+                
+                
+                
+                ) )}
+
+
+
+               </tbody>
+
+
+
+               
         </table>
+        </center>
+
        
 
-        <div style={{marginTop:'20px' }}>
-        <center>
-        <button  type="button" class="btn btn-primary" style={{marginBottom:'10px' ,padding: "12px"}}><a href = "/employeepaymentcalculation"  style={{textDecoration:'none', color:'white'}}>Employee Payment Summary</a></button>
-       
-       </center>
-        </div>
+
+
+
+        <div class="card" >
+  
+  <div class="container" >
+
+
+ 
+     
+    <p >Run Payroll</p> 
+    <h>keeps a record of the total amount of salaries or wages paid by a company to its employees</h>
+  </div>
+</div>
         </div>
       </div>
        

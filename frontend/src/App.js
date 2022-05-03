@@ -20,7 +20,7 @@ import Rmanagers from './components/Rmanagers';
 import Header from './Header';
 import test from './components/test';
 import staffPay from './components/staffPay';
-import EmployeePaymentCalculation from './paymentManagement/components/EmployeePaymentCalculation';
+
 
 export default class App extends Component{
   render(){
@@ -28,7 +28,7 @@ export default class App extends Component{
       <BrowserRouter>
       
       <div className ="container">
-      <Route path="/employeepaymentcalculation" component={EmployeePaymentCalculation}></Route> 
+     
       <Route path="/test" component={test}></Route> 
       <Route path="/staffPay" component={staffPay}></Route> 
         <Route path="/home" component={Home}></Route> 

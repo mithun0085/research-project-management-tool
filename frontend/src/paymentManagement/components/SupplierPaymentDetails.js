@@ -44,7 +44,7 @@ export default class SupplierPaymentDetails extends Component{
                  
                  
                   <div style={{marginTop:'20px' }}>
-                    <h4 className="textcenter" style={{marginTop:'40px' ,backgroundColor:'black' , color:'white', padding:'30px'}}>Supplier Payment Profile</h4>
+                    <h4 className="textcenter" >Supplier Payment Profile</h4>
                 
                      <hr/> 
 
@@ -53,7 +53,7 @@ export default class SupplierPaymentDetails extends Component{
 
  
 
-
+                     <img height="300px" width="300px" style={{borderRadius:'50px' , display:'block',marginLeft:'auto', marginRight:'auto'}} src={'/static/images/supplier.png'}/>
 
 
 
@@ -61,58 +61,53 @@ export default class SupplierPaymentDetails extends Component{
 
 
         
-                     <table className="table table-hover" style={{marginTop:'40px'}}> 
-                        <tr>
+                     
                             
                     
-                          <th scope="col"style={{textAlign:'right', }}>Supplier Name:</th>
-                          <th >{Suppliername}</th>
-                        </tr>
-                        
+                          
+                          <p style={{textAlign:'center'}}>Supplier Name:  {Suppliername}</p>
+                       
+                          <p style={{textAlign:'center'}}>Registration No:  {Supplierid}</p>
+                       
 
-                        <tr>
-                          <th scope="col"style={{textAlign:'right'}}>Registration NO:</th>
-                          <th  >{Supplierid}</th>
-                        </tr>
+                       
 
-                       </table>
-
-                                 
+                               
 
                      <center>
         
-        <table class="h" >
+        <table class="gfg" >
             <tr>
-                 <th class="th1"></th>
-                <th class="th1" >Ithem Price:</th>
-                <th class="th1">Item Quantity:</th>
-                <th class="th1">Amount:</th>
+                 
+                <td class="th1" >Ithem Price:</td>
+                <td class="th1">Item Quantity:</td>
+                <td class="th1">Amount:</td>
                
             </tr>
         </table>
         <table class = "gfg">
             <tr>
-               < td class="th1"></td>
-                <td class = "geeks" class="th1">{Price1}</td>
+               
+                <td  class="th1">{Price1}</td>
                 <td class="th1">{Quantity1}</td>
                 <td class="th1">{Amount1}</td>
                
             </tr>
             <tr>
-            < td class="th1"></td>
+            
                 <td class = "geeks" class="th1">{Price2}</td>
                 <td class="th1">{Quantity2}</td>
                 <td class="th1">{Amount2}</td>
             </tr>
             <tr>
-            < td class="th1"></td>
+           
                 <td class = "geeks" class="th1">{Price3}</td>
                 <td class="th1">{Quantity3}</td>
                 <td class="th1">{Amount3}</td>
             </tr>
        
             <tr>
-            < td class="th1"></td>
+           
                 <td class = "geeks" class="th1">{Price4}</td>
                 <td class="th1">{Quantity4}</td>
                 <td class="th1">{Amount4}</td>
@@ -120,21 +115,21 @@ export default class SupplierPaymentDetails extends Component{
        
 
             <tr>
-            < td class="th1"></td>
+            
                 <td class = "geeks" class="th1">{Price5}</td>
                 <td class="th1">{Quantity5}</td>
                 <td class="th1">{Amount5}</td>
             </tr>
 
             <tr>
-            < td class="th1"></td>
+            
                 <td class = "geeks" class="th1">{Price6}</td>
                 <td class="th1">{Quantity6}</td>
                 <td class="th1">{Amount6}</td>
             </tr>
 
             <tr>
-            < td class="th1"></td>
+         
                 <td class = "geeks" class="th1"></td>
                 <td  class="h" class="th1" style={{backgroundColor:'lightgray'}} >Total</td>
                 <td class="th1"  style={{backgroundColor:'	lightgray'}}>{Total}</td>

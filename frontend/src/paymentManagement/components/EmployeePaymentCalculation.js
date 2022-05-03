@@ -1,4 +1,3 @@
-
 import React, {Component} from 'react';
 import axios from 'axios'; 
 import jsPDF from "jspdf";
@@ -61,36 +60,84 @@ onDelete = (id) =>{
 
 render(){ 
     return(
-      <div className ="background3">
+      <div >
       <div className ="container">
       <div className="row">
         
 
 
-
-        <div className="textcenter" style={{marginTop:'40px' ,backgroundColor:'black' , color:'white', padding:'30px'}}>
-           <h4>Employee Payment Management</h4>
+<div  >
+        <div  className="textcenter" style={{marginTop:'40px' }}>
+           <h4>Employee Payment Summary</h4>
        </div>
        <hr/>
+
+
+       
+       
+                  <div class="card2" id="content"   >
+  
+  <div class="container" >
+  <form   className="needs-validation" noValidate>
+                        
+
+
+                      
+                        
+                                                <div className="form-group" style={{marginBottom:'15px'}}>
+                                                   <label style={{marginBottom:'15px'}} class="form-label" ></label>
+                                                    <input   style={{backgroundColor:'LightCyan'}}type="text" className="form-control"  placeholder="Enter Year" 
+                                                   />
+                                                </div>
+                                                </form>
+
+  <div class="form-floating">
+  <select class="form-select" id="floatingSelect" aria-label="Floating label select example" style={{backgroundColor:'LightCyan'}}>
+   
+    <option value="1">January</option>
+    <option value="2">February</option>
+    <option value="3">March</option>
+    <option value="1">April</option>
+    <option value="2">May</option>
+    <option value="2">June</option>
+    <option value="3">July</option>
+    <option value="1">August</option>
+    <option value="2">September</option>
+    <option value="3">Octomber</option>
+    <option value="1">November</option>
+    <option value="2">December</option>
+    
+  </select>
+  <label for="floatingSelect">Select Month</label>
+</div>
 
         <div className="col-lg-3 mt-2 mb-2">
        
              </div>
              
       </div>
-        <table id="content" className="table table-hover" style={{marginTop:'40px'}} > 
+        <table  className="table table-hover" style={{marginTop:'40px'}} > 
           <thead>
             <tr>
             <th scope="col">#</th>
-              <th scope="col">Payment ID</th>
-              <th scope="col">Basic Salary</th>
-              <th scope="col">OT</th>
-              <th scope="col">Vehicle Allowance</th>
-              <th scope="col">Bonus</th>
-              <th scope="col">Insurance</th>
-              <th scope="col">Transport</th>
-              <th scope="col">Net Salary</th>
+              <th scope="col">PaymentID</th>
+              <th scope="col">Basic Salary (Rs)</th>
+              <th scope="col">OT (Rs)</th>
+              <th scope="col">Allowance (Rs)</th>
+              <th scope="col">Bonus (Rs)</th>
+              <th scope="col">Insurance (Rs)</th>
+              <th scope="col">Transport (Rs)</th>
+              <th scope="col">NetSalary (Rs)</th>
               <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              
+              
               <th scope="col">Action</th>
             </tr>
           </thead>
@@ -99,16 +146,23 @@ render(){
               {this.state.salaries.map((salaries,index)=>( //used salaries array variable
                 <tr key={index}>
                   <th scope="row">{index+1}</th>  
-                  <td>
+                  <td style={{color:"blue",fontWeight:'bold'}}>
                      {salaries.Paymentid}
                  </td>  
-                  <td>{salaries.Basicsalary}</td>
-                  <td>{salaries.OT}</td>
-                  <td>{salaries.Vehicleallowance}</td>
-                  <td>{salaries.Bonus}</td>
-                  <td>{salaries.Insurance}</td>
-                  <td>{salaries.Transport}</td>
-                  <td>{salaries.Netsalary}</td>
+                  <td  style={{color:"darkblue",fontWeight:'bold'}}>{salaries.Basicsalary}</td>
+                  <td style={{color:"darkblue",fontWeight:'bold'}}>{salaries.OT}</td>
+                  <td  style={{color:"darkblue",fontWeight:'bold'}}>{salaries.Vehicleallowance}</td>
+                  <td  style={{color:"darkblue",fontWeight:'bold'}}>{salaries.Bonus}</td>
+                  <td  style={{color:"darkblue",fontWeight:'bold'}}>{salaries.Insurance}</td>
+                  <td  style={{color:"darkblue",fontWeight:'bold'}}>{salaries.Transport}</td>
+                  <td style={{color:"blue",fontWeight:'bold'}}>{salaries.Netsalary}</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
                   <td></td>
                   <td>
 
@@ -130,8 +184,12 @@ render(){
 
           </tbody>
         </table>
+        </div>
+        </div>
+        </div>
+       
      
-<button className="btn3 button3" onClick={this.GeneratePDF} type="primary">Create pdf</button>
+<button className="btn3 button3" onClick={this.GeneratePDF} type="primary">Print the Report</button>
 
         </div>
       </div>
@@ -142,3 +200,7 @@ render(){
     )
   }
 }
+
+
+
+

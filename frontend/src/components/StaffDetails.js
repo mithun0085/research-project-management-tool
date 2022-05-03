@@ -31,23 +31,23 @@ export default class StaffDetails extends Component{
         return(
             
             <div style={{marginTop:'20px'}}>
-                <h4>Staff Profile Details</h4>
+                <h4>Your Salary Details</h4>
                 
                 <hr/>
                 <dl className="row">
-                    <dt className="col-sm-3">Name</dt>
+                    <dt className="col-sm-3">Basic Salary</dt>
                     <dd className="col-sm-9">{name}</dd>
-                    <dt className="col-sm-3">Role</dt>
+                    <dt className="col-sm-3">OT Hours</dt>
                     <dd className="col-sm-9">{role}</dd>
-                    <dt className="col-sm-3">Age</dt>
+                    <dt className="col-sm-3">Vehicl Allowance</dt>
                     <dd className="col-sm-9">{age}</dd>
-                    <dt className="col-sm-3">Gender</dt>
+                    <dt className="col-sm-3">Total Addition</dt>
                     <dd className="col-sm-9">{gender}</dd>
-                    <dt className="col-sm-3">Email</dt>
+                    <dt className="col-sm-3">Transport Amount</dt>
                     <dd className="col-sm-9">{email}</dd>
-                    <dt className="col-sm-3">Address</dt>
+                    <dt className="col-sm-3">Telephone Chargers</dt>
                     <dd className="col-sm-9">{address}</dd>
-                    <dt className="col-sm-3">Contact No</dt>
+                    <dt className="col-sm-3">Total Deduction</dt>
                     <dd className="col-sm-9">{contactNo}</dd>
                     
                     

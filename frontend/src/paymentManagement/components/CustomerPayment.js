@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios'; 
+import jsPDF from "jspdf";
 
 
 
@@ -18,6 +19,17 @@ componentDidMount(){
   this.retrivePayments(); 
 }
 
+
+
+
+GeneratePDF =()=>{
+  var doc = new jsPDF("p", "pt", "a2", "pdf");
+  doc.html(document.querySelector('#content'),{
+         callback: function(pdf){
+             pdf.save("mypdf.pdf");
+         }
+  });
+};
 
 retrivePayments(){ 
   axios.get("/customers").then(res=>{ 
@@ -61,59 +73,92 @@ handleSearchArea=(e) =>{
 
  });
    }
-
    render(){ 
     return(
-      <div className ="background3">
+      <div >
       <div className ="container">
       <div className="row">
         
-        <div className="textcenter" style={{marginTop:'40px' ,backgroundColor:'black' , color:'white', padding:'30px'}}>
-            <h4>Customer Payment Management</h4>
-               </div>
-               <hr/>
-                  <div className="col-lg-3 mt-2 mb-2">
-                    <input
-                       className = "from-control" type="search" placeholder="Search" name="searchQuery" onChange={this.handleSearchArea}>
-                    </input>
-                 </div>
+
+
+<div  >
+        <div  className="textcenter" style={{marginTop:'40px' }}>
+           <h4>Employee Payment Summary</h4>
+       </div>
+       <hr/>
+
+
+       
+       
+                  <div class="card2" id="content"   >
+  
+  <div class="container" >
+  <form   className="needs-validation" noValidate>
+                        
+
+
+                      
+                        
+                                                <div className="form-group" style={{marginBottom:'15px'}}>
+                                                   <label style={{marginBottom:'15px'}} class="form-label" ></label>
+                                                    <input   style={{backgroundColor:'LightCyan'}}type="text" className="form-control"  placeholder="Enter Year" 
+                                                   />
+                                                </div>
+                                                </form>
+
+  <div class="form-floating">
+  <select class="form-select" id="floatingSelect" aria-label="Floating label select example" style={{backgroundColor:'LightCyan'}}>
+   
+    <option value="1">January</option>
+    <option value="2">February</option>
+    <option value="3">March</option>
+    <option value="1">April</option>
+    <option value="2">May</option>
+    <option value="2">June</option>
+    <option value="3">July</option>
+    <option value="1">August</option>
+    <option value="2">September</option>
+    <option value="3">Octomber</option>
+    <option value="1">November</option>
+    <option value="2">December</option>
+    
+  </select>
+  <label for="floatingSelect">Select Month</label>
+</div>
+
+        <div className="col-lg-3 mt-2 mb-2">
+       
+             </div>
+             
       </div>
-        
-        <table className="table table-hover" style={{marginTop:'40px'}}> 
+        <table  className="table table-hover" style={{marginTop:'40px'}} > 
           <thead>
             <tr>
-              <th scope="col">#</th>
-             
+            <th scope="col">#</th>
               <th scope="col">Customer Name</th>
-              <th scope="col">Registration No</th>
-              <th scope="col">Cart NO</th>
-              <th scope="col">Total Amount</th>
-              <th></th>
-             <th scope="col">Action</th>
+              <th scope="col">Customer Payment ID</th>
+              <th scope="col">Cart ID</th>
+              <th scope="col">Total (Rs)</th>
+             
+              
+              
+              <th scope="col">Action</th>
             </tr>
           </thead>
 
           <tbody>
-              {this.state.payments.map((payments,index)=>( 
+              {this.state.payments.map((payments,index)=>( //used salaries array variable
                 <tr key={index}>
                   <th scope="row">{index+1}</th>  
                   
-                   
-                   
-                  <td>{payments.Customername}</td>
-                   <td >{payments.Customerid}</td>
-                   <td >{payments.Cartid}</td>
-
-
-                    <td>{payments.Total}</td>
-                    <td></td>
-                   
-                 
+                  <td  style={{color:"darkblue",fontWeight:'bold'}}>{payments.Customername}</td>
+                  <td style={{color:"blue",fontWeight:'bold'}}>{payments.Customerid}</td>
+                  <td  style={{color:"darkblue",fontWeight:'bold'}}>{payments.Cartid}</td>
+                  <td  style={{color:"blue",fontWeight:'bold'}}>{payments.Total}</td>
                  
                   <td>
 
-                   
-                    <a className="btn btn-success" style={{backgroundColor:'	indigo'}} href="#" onClick={()=>this.onDelete(payments._id)}> 
+                    <a className="btn btn-outline-success" href="#" onClick={()=>this.onDelete(payments._id)}> 
                     <i className="far fa-trash-alt"></i>&nbsp;Delete
                     </a>
                   </td>
@@ -121,20 +166,27 @@ handleSearchArea=(e) =>{
                 </tr>
                ) )}
 
+
+
+
+
           </tbody>
         </table>
+        </div>
+        </div>
+        </div>
+       
+     
+<button className="btn3 button3" onClick={this.GeneratePDF} type="primary">Print the Report</button>
+
+        </div>
+      </div>
        
 
-       
-        
-         
-        
-        </div>
-        </div>
-      
        
      
     )
   }
 }
+
 

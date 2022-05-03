@@ -44,8 +44,7 @@ const Register = () => {
     return (
         <div className="register">
             {console.log("User", user)}
-            <h1>Register As Staff</h1>
-            <div className="az"> <img height="50%" width="50%" src={'/static/images/register.png'}></img> </div>
+            <h1>Register</h1>
             <input type="text" name="name" value={user.name} placeholder="Your Name" onChange={ handleChange }></input>
             <input type="text" name="role" value={user.role} placeholder="Your role" onChange={ handleChange }></input>
             <input type="text" name="age" value={user.age} placeholder="Your age" onChange={ handleChange }></input>
