@@ -56,6 +56,11 @@ app.use(suppliersRoute);
 
 
 
+const topicsRoute = require('./routes/topics');
+app.use(topicsRoute);
+const dmarksRoute = require('./routes/dmarks');
+app.use(dmarksRoute);
+
 
 
 
