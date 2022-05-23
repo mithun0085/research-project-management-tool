@@ -5,13 +5,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+
+
+
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
   <title>Mongo File Uploads</title>
 </head>
 
 <body>
-  >
+
+
+  <div className="backgrund3">
+    <div class="col-mb-8 mt-4 mx-auto">
+      
+          
+            
+
+
+        
+       <center>
+
+        <div class="w3-card-4 w3-margin w3-white"style="width:900px" >
+
+
 
 
 
@@ -19,13 +65,28 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 m-auto">
-        <h1 class="text-center display-4 my-4">Topic Details Document Submission</h1>
+        
+      
+        <h2 >Topic Details Document Submission</h2>
+        <hr/>
+
+        <ul>
+          <li>Upload a pdf file</li>
+          <li>File name should be (group_id.pdf)</li>
+          <li>Limit to a maximum of 3 pages</li>
+          <li>Include relevant Student ID(s) on first page</li>
+          <li style="color:red">Deadline 23:00 p.m 21st oct 2022</li>
+        </ul> 
+
+        <br><br>
         <form action="/upload" method="POST" enctype="multipart/form-data">
           <div class="custom-file mb-3">
-            <input type="file" name="file" id="file" class="custom-file-input">
+            <input type="file" name="file" id="file" class="custom-file-input" >
             <label for="file" class="custom-file-label">Choose File</label>
           </div>
-          <input type="submit" value="Submit" class="btn btn-primary btn-block">
+
+          <br><br>
+          <input type="submit" value="Add Submission" class="w3-button w3-deep-purple">
           
         </form>
         <hr>
@@ -42,20 +103,24 @@
                 <%= file.filename %>
                   <% } %>
                   <form method="POST" action="/files/<%= file._id %>?_method=DELETE">
-                    <button class="btn btn-danger btn-block mt-4">Delete</button>
+                    <button class="btn btn-dark fa fa-trash"></button>
                   </form>
           </div>
           <% }) %>
             <% } else { %>
               <p>No files to show</p>
               <% } %>
+
+         
     </div>
   </div>
 </div>
 
 
 
-
+</div>
+</center>
+</div></div>
 
 
         
