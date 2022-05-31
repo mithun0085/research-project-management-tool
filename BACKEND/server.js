@@ -72,14 +72,18 @@ app.use(aRoute);
 
 
 
-const topicsRoute = require('./routes/topics');
+const topicsRoute = require('./routes/Topics');
 app.use(topicsRoute);
+
+const topicdocsRoute = require('./routes/TopicDocs');
+app.use(topicdocsRoute);
 
 const dmarksRoute = require('./routes/dmarks');
 app.use(dmarksRoute);
 
 
-
+const dmarksRoute2 = require('./routes/dmarks2');
+app.use(dmarksRoute2);
 
 
 
