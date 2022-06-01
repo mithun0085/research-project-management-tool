@@ -22,17 +22,17 @@ function AppChat() {
     <div className="AppChat">
       {!showChat ? (
         <div className="joinChatContainer">
-          <h3>Join Your Group Chat</h3>
+          <h3>Live Group Chat</h3>
           <input
             type="text"
-            placeholder="Mithun..."
+            placeholder="Visible Nick Name..."
             onChange={(event) => {
               setUsername(event.target.value);
             }}
           />
           <input
             type="text"
-            placeholder="Group ID"
+            placeholder="Group ID..."
             onChange={(event) => {
               setRoom(event.target.value);
             }}
