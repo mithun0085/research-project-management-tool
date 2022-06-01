@@ -137,7 +137,7 @@ function Profile() {
         </div>
         <div className="profile_page">
             <div className="col-left">
-                <h2>{isAdmin ? "Admin Profile": "User Profile"}</h2>
+                <h2>{isAdmin ? "Admin Profile"  : "User Profile"}</h2>
 
                 <div className="avatar">
                     <img src={avatar ? avatar : user.avatar} alt=""/>
@@ -217,16 +217,55 @@ function Profile() {
                                             <i className="fas fa-trash-alt" title="Remove"
                                             onClick={() => handleDelete(user._id)} ></i>
                                         </td>
+                                      
+
+  
                                     </tr>
+
+                                    
                                 ))
                             }
+
+
+
                         </tbody>
+
+
+
+                      
+                            
+        
+        
+        
+                          
+
+                        
+
+
+                       
                     </table>
+                    <h2>{isAdmin ?  <button class="w3-bar-item w3-button w3-indigo" style={{width:'80%'}}><a href = "/createDocMSch"   style={{textDecoration:'none', color:'white'}}>Create Marking Schems</a></button>: <button class="w3-bar-item w3-button w3-indigo" style={{width:'80%'}}><a href = "/insertTopic"   style={{textDecoration:'none', color:'white'}}>Topic registration</a></button>}</h2>
+                    <h2>{isAdmin ? <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = "/viewMSchems"   style={{textDecoration:'none', color:'white'}}>Edit/Delete Marking Schems</a></button> : <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = "/topicSummaryS1"   style={{textDecoration:'none', color:'white'}}>Topic Feedback by Supervisors</a></button>}</h2>
+                    <h2>{isAdmin ? "": <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = "/topicDeRej"   style={{textDecoration:'none', color:'white'}}>Topic Details Registration</a></button>}</h2>
+                    <h2>{isAdmin ? "": <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = "/topicDocS"   style={{textDecoration:'none', color:'white'}}>Topic Evalution by panel </a></button>}</h2>
+                    <h2>{isAdmin ? "": <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = "/submissionRej"   style={{textDecoration:'none', color:'white'}}>Assignments </a></button>}</h2>
+                    <h2>{isAdmin ? "": <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = ""   style={{textDecoration:'none', color:'white'}}>Assignment Marks</a></button>}</h2>
+                
+                
+                
                 </div>
-            </div>
+
+              </div>
+             
+         
         </div>
+
+        
+
         </>
     )
+
+    
 }
 
 export default Profile

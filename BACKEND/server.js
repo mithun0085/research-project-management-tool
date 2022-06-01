@@ -6,6 +6,13 @@ const cookieParser = require('cookie-parser')
 const fileUpload = require('express-fileupload')
 const path = require('path')
 
+const multer = require('multer');
+const {GridFsStorage} = require('multer-gridfs-storage');
+const Grid = require('gridfs-stream');
+const methodOverride = require('method-override');
+const bodyParser = require("body-parser");
+
+
 
 const app = express()
 app.use(express.json())
@@ -15,9 +22,38 @@ app.use(fileUpload({
     useTempFiles: true
 }))
 
+
 // Routes
 app.use('/user', require('./routes/userRouter'))
 app.use('/api', require('./routes/upload'))
+
+
+
+const topicsRoute = require('./routes/Topics');
+app.use(topicsRoute);
+
+const topicdocsRoute = require('./routes/TopicDocs');
+app.use(topicdocsRoute);
+
+const dmarksRoute = require('./routes/dmarks');
+app.use(dmarksRoute);
+
+
+const dmarksRoute2 = require('./routes/dmarks2');
+app.use(dmarksRoute2);
+
+app.use("/submission", require("./routes/submission"));
+app.use("/topicrej", require("./routes/topicrej"));
+
+
+
+
+
+
+
+
+
+
 
 
 // Connect to mongodb

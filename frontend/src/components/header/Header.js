@@ -22,16 +22,32 @@ function Header() {
 
     const userLink = () => {
         return <li className="drop-nav">
+
+<li><Link to="/panelHome">Panel</Link></li>
+            <li><Link to="/supervisorHome">Supervisor</Link></li>
             <Link to="#" className="avatar">
             <img src={user.avatar} alt=""/> {user.name} <i className="fas fa-angle-down"></i>
             </Link>
+         
+
+    
+
+
             <ul className="dropdown">
                 <li><Link to="/profile">Profile</Link></li>
                 <li><Link to="/video">Video Conference</Link></li>
                 <li><Link to="/chat">Chat</Link></li>
+               
+              
+          
+             
                 <li><Link to="/" onClick={handleLogout}>Logout</Link></li>
             </ul>
         </li>
+
+
+
+
     }
 
     const transForm = {
