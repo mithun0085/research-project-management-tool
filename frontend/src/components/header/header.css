@@ -1,7 +1,7 @@
 header{
     width: 100%;
     min-height: 100px;
-    background: blue;
+    background: #282A35;
     display: flex;
     justify-content: space-between;
     align-items: center;
