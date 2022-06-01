@@ -1,65 +1,72 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");//body parser
-const cors = require("cors");
-const dotev = require("dotenv");
-const app = express();
-require("dotenv").config();
-const fileUpload= require('express-fileupload');
-const cookieParser = require('cookie-parser');
+require('dotenv').config()
+const express = require('express')
+const mongoose = require('mongoose')
+const cors = require('cors')
+const cookieParser = require('cookie-parser')
+const fileUpload = require('express-fileupload')
+const path = require('path')
 
 
+const app = express()
 app.use(express.json())
-app.use(cookieParser())
 app.use(cors())
+app.use(cookieParser())
 app.use(fileUpload({
-    useTempFiles:true
+    useTempFiles: true
 }))
 
+// Routes
+app.use('/user', require('./routes/userRouter'))
+app.use('/api', require('./routes/upload'))
 
 
-const PORT = process.env.PORT || 8070;
-
-app.use(cors());//midleware
-
-
-const URL =  process.env.MONGODB_URL;
-
-{mongoose.connect(URL, {});}
-const connection = mongoose.connection;
-connection.once("open", () => {
-    console.log("Mongodb Connection success!");
+// Connect to mongodb
+const URI = process.env.ATLAS_URI
+mongoose.connect(URI, {
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}, err => {
+    if(err) throw err;
+    console.log("Connected to mongodb")
 })
 
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('client/build'))
+    app.get('*', (req, res)=>{
+        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
+    })
+}
 
 
 
-app.use(bodyParser.json());//bodyparser midleware
+const PORT = process.env.PORT;
+const server = app.listen(
+  PORT,
+  console.log(`Server running on PORT ${PORT}...`)
+);
 
+const io = require("socket.io")(server, {
+  pingTimeout: 60000,
+  cors: {
+    origin: "http://localhost:3000",
+    // credentials: true,
+  },
+});
 
-const logresRoute = require('./routes/logres');
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(logresRoute);
+io.on("connection", (socket) => {
+	socket.emit("me", socket.id)
 
-const staffRoute = require('./routes/staffs');//path to method 
-app.use(staffRoute); 
+	socket.on("disconnect", () => {
+		socket.broadcast.emit("callEnded")
+	})
 
-const customersRoute = require('./routes/customers');
-app.use(customersRoute);
+	socket.on("callUser", (data) => {
+		io.to(data.userToCall).emit("callUser", { signal: data.signalData, from: data.from, name: data.name })
+	})
 
-const employeesRoute = require('./routes/employees');
-app.use(employeesRoute);
-
-const suppliersRoute = require('./routes/suppliers');
-app.use(suppliersRoute);
-
-
-
-
-
-
-
-app.listen(PORT, () => {
-    console.log(`Server is up and running on port number: ${PORT}`)
+	socket.on("answerCall", (data) => {
+		io.to(data.to).emit("callAccepted", data.signal)
+	})
 })

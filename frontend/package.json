@@ -1,24 +1,34 @@
 {
-  "name": "frontend",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "axios": "^0.21.4",
-    "chart.js": "^3.5.1",
-    "jspdf": "^2.4.0",
-    "react": "^17.0.2",
-    "react-chartjs-2": "^3.0.5",
-    "react-dom": "^17.0.2",
-    "react-paypal-express-checkout": "^1.0.5",
-    "react-rdux": "0.0.1",
-    "react-redux": "^7.2.5",
-    "react-router-dom": "^5.3.0",
-    "react-scripts": "4.0.3",
-    "redux": "^4.1.1",
-    "web-vitals": "^1.1.2"
+    "@chakra-ui/icons": "^2.0.1",
+    "@chakra-ui/layout": "^2.0.1",
+    "@chakra-ui/react": "^2.1.2",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "add": "^2.0.6",
+    "axios": "^0.20.0",
+    "peerjs": "^1.4.6",
+    "react": "^16.14.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dom": "^16.14.0",
+    "react-facebook-login": "^4.1.1",
+    "react-google-login": "^5.2.2",
+    "react-redux": "^7.2.8",
+    "react-router-dom": "^5.3.1",
+    "react-scripts": "^3.4.3",
+    "redux": "^4.2.0",
+    "simple-peer": "^9.11.1",
+    "socket.io-client": "^4.5.1",
+    "styled-components": "^5.3.5",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,10 +37,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -44,5 +51,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:8070"
+  "proxy": "http://localhost:5000"
 }
