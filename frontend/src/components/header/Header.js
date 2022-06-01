@@ -41,9 +41,8 @@ function Header() {
     return (
         <header>
             <div className="logo">
-                <h1><Link to="/">RESEARCH✮MANAGEMENT</Link></h1>
+            <h1><Link to="/">RESEARCH PROJECT MANAGEMENT</Link></h1>
             </div>
-
             <ul style={transForm}>
             {/* <li><Link to="/"> Shop</Link></li> */}
             <li><Link to="/"> Appoinments</Link></li>

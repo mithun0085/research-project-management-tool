@@ -5,6 +5,7 @@ import BgImg from '../../assets/image.jpg';
 
 const Section = styled.section`
     background: url(${BgImg});
+    width: 3000;
     height: 785px;
     display: block;
     background-repeat: no-repeat;
