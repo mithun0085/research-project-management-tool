@@ -28,6 +28,7 @@ function Header() {
             <ul className="dropdown">
                 <li><Link to="/profile">Profile</Link></li>
                 <li><Link to="/video">Video Conference</Link></li>
+                <li><Link to="/chat">Chat</Link></li>
                 <li><Link to="/" onClick={handleLogout}>Logout</Link></li>
             </ul>
         </li>

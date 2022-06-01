@@ -5,6 +5,7 @@ import {dispatchLogin, fetchUser, dispatchGetUser} from './redux/actions/authAct
 import { FooterContainer } from './containers/footer'
 import { Route } from "react-router-dom";
 import VideoConference from "./Pages/VideoConference";
+import AppChat from "./Pages/AppChat";
 import Header from './components/header/Header'
 import Body from './components/body/Body'
 import axios from 'axios';
@@ -46,6 +47,7 @@ function App() {
 
       <div className="App">
         <Route path="/video" component={VideoConference} />
+        <Route path="/chat" component={AppChat} />
         <Body />
       </div>
       <FooterContainer/>
