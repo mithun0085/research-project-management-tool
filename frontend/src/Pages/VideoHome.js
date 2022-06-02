@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import VideoPlayer from "react-video-js-player"
 import { useEffect, useState } from "react";
 import React from 'react';
+import { Box, Text } from "@chakra-ui/layout";
 
 const VideoHome = () => {
   const [videocs, setVideocs] = useState();
@@ -16,15 +17,28 @@ const VideoHome = () => {
   }, []);
 
   return (
-    <div className="row">
+    <Box
+        d="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        bg="white"
+        w="100%"
+        p="5px 10px 5px 10px"
+        borderWidth="100px"
+        
+      >
+    <div className="" style={{alignItems:'center', textAlign:'center'}}>
       {videocs?.map((videoc) => (
-        <div className="col-md-3 card me-3 mt-2 p-0 mb-2 d-flex" key={videoc._id}>
-         
-         
-          <VideoPlayer src={videoc.video} width="720"
+        <div style={{color:'red', backgroundColor:'#e2e2e2' }} key={videoc._id}>
+         <h3>Upload Success</h3>
+         <h1 style={{color:'black'}}>
+         Video Submission Preview
+         </h1>
+         <center>
+         <VideoPlayer src={videoc.video} width="720"
                     height="420"
           playBackRates={[0.5,1,1.25,1.5,2]}/>
-      
+        </center>
           
           <div className="p-2">
             <h3>{videoc.name}</h3>
@@ -32,6 +46,7 @@ const VideoHome = () => {
         </div>
       ))}
     </div>
+    </Box>
   );
 };
 

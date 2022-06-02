@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import React from 'react';
+import { Box, Text } from "@chakra-ui/layout";
+
 
 const AddVideoc = () => {
   const history = useHistory();
@@ -39,6 +41,16 @@ const AddVideoc = () => {
   };
 
   return (
+     <Box
+        d="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        bg="#e2e2e2"
+        w="100%"
+        p="5px 10px 5px 10px"
+        borderWidth="100px"
+        
+      >
     <div style={{ maxWidth: 500, margin: "auto" }}>
       {/* <pre>{file!=null && file.length}</pre> */}
       <form onSubmit={upload} encType="multipart/form-data" >
@@ -55,10 +67,12 @@ Upload Video
 </div>
 
 
-  <button className="mt-2" 
+  <button className="mt-2" style={{color:'white', backgroundColor:'blue' ,
+   margin:'5px', marginColor:'black' , paddingLeft:'10px' , paddingRight:'10px' ,
+  paddingTop:'2px' , paddingBottom:'2px'}}
   type="submit" 
   variant="primary"
-   size="lg">
+   size="xlg">
    Upload
    </button>      
   </form>
@@ -87,6 +101,7 @@ Upload Video
         </button>
       </div> */}
     </div>
+    </Box>
   );
 };
 
