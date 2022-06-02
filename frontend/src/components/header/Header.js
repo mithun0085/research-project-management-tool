@@ -41,7 +41,8 @@ function Header() {
                 <li><Link to="/profile">Profile</Link></li>
                 <li><Link to="/video">Video Conference</Link></li>
                 <li><Link to="/chat">Chat</Link></li>
-               
+               <li><Link to="/addvideoc">Video Add</Link></li>
+               <li><Link to="/videohome">Video Home</Link></li>
               
           
              

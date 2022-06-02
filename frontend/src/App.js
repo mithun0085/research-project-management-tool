@@ -42,7 +42,8 @@ import SupervisorHome from './supervisorManagement/components/SupervisorHome';
 import SubmissionEva from './supervisorManagement/components/SubmissionEva';
 import SubmissionEva2 from './supervisorManagement/components/SubmissionEva2';
 
-
+import VideoHome from "./Pages/VideoHome";
+import AddVideoc from "./Pages/AddVideoc";
 
 function App() {
   const dispatch = useDispatch()
@@ -111,7 +112,8 @@ function App() {
         <Route path="/submissionEva" component={SubmissionEva}></Route> 
         <Route path="/submissionEva2" component={SubmissionEva2}></Route> 
 
-
+        <Route path="/addvideoc" component={AddVideoc} />
+        <Route path="/videohome" component={VideoHome} />
         <Body />
       </div>
       <FooterContainer/>

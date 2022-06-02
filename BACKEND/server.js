@@ -6,10 +6,7 @@ const cookieParser = require('cookie-parser')
 const fileUpload = require('express-fileupload')
 const path = require('path')
 
-const multer = require('multer');
-const {GridFsStorage} = require('multer-gridfs-storage');
-const Grid = require('gridfs-stream');
-const methodOverride = require('method-override');
+
 const bodyParser = require("body-parser");
 
 
@@ -47,6 +44,16 @@ app.use("/topicrej", require("./routes/topicrej"));
 
 
 
+<<<<<<< HEAD
+=======
+
+
+//video 
+app.use("/videoc", require("./routes/videoc"));
+
+
+
+>>>>>>> 3ce386d326e36435d401c4718a1c9f9f900c3701
 // Connect to mongodb
 const URI = process.env.ATLAS_URI
 mongoose.connect(URI, {
