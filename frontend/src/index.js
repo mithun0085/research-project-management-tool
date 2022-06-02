@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+
 import * as serviceWorker from './serviceWorker';
 import DataProvider from './redux/store'
 import { GlobalStyles } from './global-styles';
@@ -13,6 +14,7 @@ ReactDOM.render(
     <>
     <GlobalStyles />
     <App />
+    
     </>
     </DataProvider>
   </React.StrictMode>,
