@@ -43,7 +43,7 @@ function Header() {
                 <li><Link to="/chat">Chat</Link></li>
                <li><Link to="/addvideoc">Video Add</Link></li>
                <li><Link to="/videohome">Video Home</Link></li>
-              
+              <li><Link to="/insertEMarks">EMarks</Link></li>
           
              
                 <li><Link to="/" onClick={handleLogout}>Logout</Link></li>

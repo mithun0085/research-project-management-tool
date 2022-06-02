@@ -49,13 +49,16 @@ const AddVideoc = () => {
         w="100%"
         p="5px 10px 5px 10px"
         borderWidth="100px"
-        
+      
       >
     <div style={{ maxWidth: 500, margin: "auto" }}>
+      <h1 style={{color:'black'}}>
+         Upload Your Final Presentation
+         </h1>
       {/* <pre>{file!=null && file.length}</pre> */}
       <form onSubmit={upload} encType="multipart/form-data" >
   <div className="form-group">  
-  <input type="text"  placeholder="Name" value={name} required
+  <input type="text"  placeholder="Group Name" value={name} required
    onChange={e=>{setName(e.target.value)}}
    className="form-control"/>
    </div>

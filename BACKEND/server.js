@@ -41,7 +41,8 @@ app.use("/submission", require("./routes/submission"));
 app.use("/topicrej", require("./routes/topicrej"));
 
 
-
+const emarksRoute = require('./routes/emarks');
+app.use(emarksRoute);
 
 
 //video 

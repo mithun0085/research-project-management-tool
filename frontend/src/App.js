@@ -22,6 +22,7 @@ import AdminHome from './adminManagement/components/AdminHome';
 import PanelHome from './panelManagement/components/PanelHome';
 import Home from './panelManagement/components/Home';
 import EvaluateTopics from './panelManagement/components/EvaluateTopics';
+import InsertMarks from './panelManagement/components/InsertMarks';
 
 import InsertTopic from './studentManagement/components/InsertTopic';
 import StudentHome from './studentManagement/components/StudentHome';
@@ -114,6 +115,8 @@ function App() {
 
         <Route path="/addvideoc" component={AddVideoc} />
         <Route path="/videohome" component={VideoHome} />
+
+        <Route path="/insertEMarks" component={InsertMarks} />
         <Body />
       </div>
       <FooterContainer/>
