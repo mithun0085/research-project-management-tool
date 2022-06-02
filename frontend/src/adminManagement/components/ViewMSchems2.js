@@ -163,4 +163,3 @@ handleSearchArea=(e) =>{
   }
 }
 
-

@@ -18,9 +18,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 app.use(cookieParser())
-app.use(fileUpload({
-    useTempFiles: true
-}))
+
 
 
 // Routes
@@ -44,13 +42,6 @@ app.use(dmarksRoute2);
 
 app.use("/submission", require("./routes/submission"));
 app.use("/topicrej", require("./routes/topicrej"));
-
-
-
-
-
-
-
 
 
 

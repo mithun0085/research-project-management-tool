@@ -137,7 +137,8 @@ function Profile() {
         </div>
         <div className="profile_page">
             <div className="col-left">
-                <h2>{isAdmin ? "Admin Profile"  : "User Profile"}</h2>
+               <h2>{isAdmin ? "Admin Profile"  : "User Profile"}</h2>
+                
 
                 <div className="avatar">
                     <img src={avatar ? avatar : user.avatar} alt=""/>
