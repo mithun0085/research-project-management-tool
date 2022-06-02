@@ -21,9 +21,13 @@ function Header() {
     }
 
     const userLink = () => {
+
+
+            
+        
         return <li className="drop-nav">
 
-<li><Link to="/panelHome">Panel</Link></li>
+            <li><Link to="/panelHome">Panel</Link></li>
             <li><Link to="/supervisorHome">Supervisor</Link></li>
             <Link to="#" className="avatar">
             <img src={user.avatar} alt=""/> {user.name} <i className="fas fa-angle-down"></i>
@@ -62,11 +66,9 @@ function Header() {
             </div>
             <ul style={transForm}>
             {/* <li><Link to="/"> Shop</Link></li> */}
-            <li><Link to="/"> Appoinments</Link></li>
-            <li><Link to="/"> Staff</Link></li>
+            
             {/* <li><Link to="/"> E-Training</Link></li> */}
-            <li><Link to="/"> Reviews</Link></li>
-            <li><Link to="/"> Inventory</Link></li>                
+                          
                 {
                     isLogged
                     ? userLink()
