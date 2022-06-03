@@ -89,6 +89,7 @@ constructor(props){
         
             axios.post("/topic/save",data).then((res) =>{ 
                 if(res.data.success){ 
+                    alert("Topic Registered Successfully")
                     this.setState( 
                         {
                           GroupId:"",
@@ -123,12 +124,14 @@ constructor(props){
                   <center>
                  
   
-                
+                  <div class="w3-card-4 w3-margin w3-white"style={{width:'700px'}} >
 
   <h1 className="textcenter" style={{marginTop:'40px',fontFamily: 'Fantasy'}}>Topic Registration</h1>  
 
 <br></br>
-
+  <div class="card"  >
+  
+  <div class="w3-container w3-red" >
 
 
  
@@ -136,7 +139,8 @@ constructor(props){
    <h1>Group Leader</h1>
     <h>Research topic shold be submitted by group leader. Once you submitted the topic, it wil be sent to the relevant supervisor. 
         A feedback will be send by the supervisor</h>
-
+  </div>
+</div>
 
 
 <br></br><br></br>
@@ -164,7 +168,7 @@ constructor(props){
                         
                  
 
-
+<h style={{color:'red'}} >once the topic is submitted, it will not be able to change again until you get a feedback.Your are able to register maximum 3 topics only</h>
                 
                        <div>
                        <center>
@@ -181,7 +185,7 @@ constructor(props){
 
             
                    
-
+</div>
 
               
 </center>             
@@ -194,3 +198,4 @@ constructor(props){
         )
     }
 }
+

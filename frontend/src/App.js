@@ -49,6 +49,7 @@ import presentationEva from './panelManagement/components/presentationEva';
 import UploadDocAdd from "./studentManagement/components/UploadDocAdd";
 import UploadDocS from './supervisorManagement/components/UploadDocS';
 import VideoHome1 from './panelManagement/components/viewVideo';
+import DMarksView from './studentManagement/components/DMarksView';
 
 function App() {
   const dispatch = useDispatch()
@@ -107,6 +108,7 @@ function App() {
         <Route path="/topicDeRej" component={TopicDeRej}></Route>
         <Route path="/submissionRej" component={SubmissionRej}></Route>
         <Route path="/topicDocS" component={TopicDocS}></Route>
+         <Route path="/dMarksView" component={DMarksView}></Route>
 
         <Route path="/topicAccept" component={TopicAccept}></Route> 
         <Route path="/topicAction/:id" component={TopicAction}></Route> 

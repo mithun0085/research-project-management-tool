@@ -6,7 +6,7 @@ import axios from 'axios';
 const initialState ={
     
     DDescription1:"",  DDescription2:"", DDescription3:"", DDescription4:"",DDescription5:"", Name:"",Nameerror:"",
-        DMark1:"", DMark2:"",  DMark3:"",DMark4:"",DMark5:"",DTotal:"", 
+        DMark1:"", DMark2:"",  DMark3:"",DMark4:"",DMark5:"",DTotal:"", DWeight:"",DAllocatedMarks:""
    
    
       
@@ -77,6 +77,14 @@ constructor(props){
         e.preventDefault();
     }
 
+    DTotalWcalculate =(e)=>{
+
+  
+     
+        this.setState({DAllocatedMarks:parseInt(this.state.DTotal)*parseFloat((this.state.DWeight)/100)});
+        e.preventDefault();
+    }
+
    
 
  
@@ -88,7 +96,7 @@ constructor(props){
         e.preventDefault();
         const isValid =this.validate();
  
-         const{DDescription1,DMark1,DDescription2,DMark2,DDescription3,DMark3,DDescription4,DMark4,DDescription5,DMark5,DTotal
+         const{DDescription1,DMark1,DDescription2,DMark2,DDescription3,DMark3,DDescription4,DMark4,DDescription5,DMark5,DTotal,DWeight,DAllocatedMarks
           ,Name  } = this.state;
 
          const data = {
@@ -103,7 +111,9 @@ constructor(props){
             DDescription5:DDescription5,
             DMark5:DMark5,
             DTotal:DTotal,
-            Name:Name
+            DWeight:DWeight,
+        DAllocatedMarks:DAllocatedMarks,
+        Name:Name
 
            
 
@@ -128,7 +138,8 @@ constructor(props){
                             DDescription5:"",
                             DMark5:"",
                             DTotal:"",
-                         
+                            DWeight:"",
+                            DAllocatedMarks:"",
 
 
                }
@@ -152,7 +163,7 @@ constructor(props){
                   
               <center>
                  
-            
+                <div class="w3-card-4 w3-margin w3-white"style={{width:'800px'}} >
 
                     <h1 className="textcenter" style={{marginTop:'40px'}}>Create Marking Scheme</h1>
                       <form className="needs-validation" noValidate>
@@ -162,7 +173,7 @@ constructor(props){
                
               <center>
 
-            
+              <div style={{color:'red',textAlign:'left'}}>{this.state.Nameerror}</div>
               <div className="form-group" style={{marginBottom:'15px',maxlength:"3"}}>
                            <label style={{marginBottom:'15px'}} class="form-label" ></label>
                             <input type="text" className="form-control"  placeholder="Enter Marking Schema Name" name="Name" 
@@ -312,9 +323,23 @@ constructor(props){
 
                             </button>  
                         
-                    
+                        <center>
 
-                
+                           <div className="form-group" style={{marginBottom:'15px'}}>
+                               <label style={{marginBottom:'5px'}} class="form-label"></label>
+                               
+                                <input type="text" className="form-control" placeholder="Enter Weight of the Document" name="DWeight" 
+                                 value={this.state.DWeight} onChange={this.handleInputChange}/>
+                            </div>
+                         </center>
+
+                         <button className="btn btn-success"  type="submit" style={{marginTop:'20px',width:'140px',height:'100px',float: 'left'}} onClick={this.DTotalWcalculate}> 
+                      
+                      &nbsp;Calculate Alloacated Marks
+                      <h2>{this.state.DAllocatedMarks}</h2>
+            
+
+                  </button>
                     
                     </div>
 
@@ -336,7 +361,7 @@ constructor(props){
                        
                     
        </form>
-    
+      </div>
 
 
 
@@ -361,3 +386,4 @@ constructor(props){
         )
     }
 }
+

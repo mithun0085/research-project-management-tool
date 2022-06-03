@@ -21,7 +21,7 @@ render(){
 
   <button type="button" class="btn btn-warning"  ><a href = "/home"  style={{textDecoration:'none', color:'white'}}>Evaluate Topics</a></button>
           <button type="button" class="btn btn-warning"  ><a href = "/presentationEva"  style={{textDecoration:'none', color:'white'}}>Evaluate Presentation</a></button>
-  <button type="button" class="btn btn-warning"  ><a href = "/home"  style={{textDecoration:'none', color:'white'}}>Upload </a></button>
+  
   
  
  </div>

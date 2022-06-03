@@ -67,7 +67,7 @@ render(){
       
            <h4 className="textcenter" style={{marginTop:'40px' ,fontFamily: 'Fantasy' }}>Topic Feedback by supervisors</h4>
       
-       <hr/>
+   
      
         <div className="col-lg-3 mt-2 mb-2">
           
@@ -138,7 +138,17 @@ render(){
 
 
 
+        <div class="card"  >
+  
+  <div class="w3-container w3-red" >
 
+
+ 
+     
+   <h1>Proccess</h1>
+    <h>Topic should be uploaded by students utill it accepted /If accepted send a document contains details that is asking under Topic Details Registration </h>
+  </div>
+</div>
         </div>
       </div>
        
@@ -146,6 +156,7 @@ render(){
     )
   }
 }
+
 
 
 

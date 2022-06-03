@@ -78,7 +78,7 @@ export default class TopicAction extends Component{
             
              axios.put(`/topic/update/${id}`,data).then((res) =>{ 
                  if(res.data.success){ 
-                     alert("Payment Updated Successfully")
+                     alert("Feedback Inserted Successfully")
                      this.setState( 
                             {
                               GroupId:"",
@@ -139,7 +139,7 @@ render(){
 
 
 
-      <div className="backgrund3" >
+      <div style={{backgroundColor:''}} >
         <div class="col-mb-8 mt-4 mx-auto">
           
               
@@ -149,15 +149,17 @@ render(){
             <center>
         
 
-<div class="container" >
-
+<div >
+<div class="w3-card-4 w3-margin "style={{width:'700px',height:'580px'}} >
 <h1 className="textcenter" style={{marginTop:'40px',fontFamily: 'Fantasy'}}>Accept/Reject Topics</h1>
 <form className="needs-validation" noValidate>
                   
 
 <br></br>
 
+<div class="w3-container w3-teal" >
 
+</div>
 <br></br><br></br>
 
 
@@ -209,7 +211,7 @@ render(){
 
 
              
-</div>
+</div></div>
 
         
 </center>             

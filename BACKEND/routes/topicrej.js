@@ -84,5 +84,43 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get('/:id',async (req, res) =>{ 
+  let name = req.params.id; 
+  Topicrej.findById(name,(err,topicrej)=>{ 
+      if(err){
+          return res.status(400).json({
+              success:false,err});
+      }
+      return res.status(200).json({
+          success:true,
+         topicrej
+      });
+  });
+});
+
+
+router.put('/update/:id',(req,res)=>{ 
+  Topicrej.findByIdAndUpdate( 
+      req.params.id, 
+      {
+          $set:req.body 
+
+      },
+      (err,topicrej)=>{ 
+          if(err){  
+              return res.status(400).json({
+                  error:err
+                 });
+          }
+          return res.status(200).json({
+              success:"Updated Successfully"
+          });
+      }
+  );
+});
+
+
+
+
 
 module.exports = router;

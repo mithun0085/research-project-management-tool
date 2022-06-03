@@ -148,8 +148,8 @@ render(){
             <center>
         
 
-<div class="container" >
-
+<div >
+<div class="w3-card-4 w3-margin "style={{width:'700px',height:'580px'}} >
 <h1 className="textcenter" style={{marginTop:'40px',fontFamily: 'Fantasy'}}>Accept/Reject Topics</h1>
 <form className="needs-validation" noValidate>
                   
@@ -209,7 +209,7 @@ render(){
 
 
              
-</div>
+</div></div>
 
         
 </center>             

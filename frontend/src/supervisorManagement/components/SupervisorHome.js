@@ -20,7 +20,7 @@ render(){
  <div class="btn-group-vertical"   >
 
 <button type="button" class="btn btn-warning"  ><a href = "/topicAccept"  style={{textDecoration:'none', color:'white'}}>Research Topics</a></button>
-<button type="button" class="btn btn-dark" ><a href = "/viewMSchems2"  style={{textDecoration:'none', color:'white'}}> Document Marking Schemes</a></button>
+
 <button type="button" class="btn btn-dark" ><a href = "/submissionEva"  style={{textDecoration:'none', color:'white'}}> Assignment Evaluation</a></button>
 
 

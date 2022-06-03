@@ -147,8 +147,8 @@ render(){
             <center>
         
 
-<div class="container" >
-
+<div  >
+<div class="w3-card-4 w3-margin "style={{width:'700px',height:'600px'}} >
 <h1 className="textcenter" style={{marginTop:'40px',fontFamily: 'Fantasy'}}>Insert Topic</h1>
 <form className="needs-validation" noValidate>
                   
@@ -186,7 +186,7 @@ render(){
                
                <div>
                  <center>
-                 <button className="btn btn-primary"  type="submit" style={{marginTop:'80px',width:'150px',height:'100px',float: 'center'}} onClick={this.onSubmit}>
+                 <button className="w3-button w3-indigo"  type="submit" style={{marginTop:'80px',width:'150px',height:'100px',float: 'center'}} onClick={this.onSubmit}>
                &nbsp;save
                  </button>
                 </center>
@@ -196,7 +196,7 @@ render(){
 
 
              
-</div>
+</div></div>
 
         
 </center>             

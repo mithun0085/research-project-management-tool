@@ -58,31 +58,36 @@ handleSearchArea=(e) =>{
 render(){ 
     return(
       <div style={{backgroundColor:'GhostWhite'}}>
-      <div className ="container">
+      <div >
       <div className="row">
         
 
 
 
+      <center>
+           <h4 className="textcenter" style={{marginTop:'20px' ,fontFamily: 'Fantasy',fontSize:'40px' }}>Topic Feedback by supervisors</h4>
       
-           <h4 className="textcenter" style={{marginTop:'40px' ,fontFamily: 'Fantasy' }}>Topic Feedback by supervisors</h4>
-      
-       <hr/>
+    
+       </center>
 
 
 
-
-
+       <div class="card" style={{width:'400px', height:'60px',backgroundColor:'blue',marginTop:'5px'}} >
+  
+  <div class="w3-container w3-amber"  >
 
 
  
      
-
+   <h1 >Notice</h1>
+    <h>Topic should be uploaded by students utill it accepted /If accepted send a document contains details that is asking under Topic Details Registration </h>
+  </div>
+</div>
 
 
 
        
-     
+     <center>
         <div className="col-lg-3 mt-2 mb-2">
           
         <input
@@ -90,7 +95,7 @@ render(){
         </input>
             
              </div>
-           
+             </center>
       </div>
 
 
@@ -98,7 +103,7 @@ render(){
    
       
 <center>
-        <table id="customers" className="table table-hover" style={{marginTop:'40px',backgroundColor:'white'}} > 
+        <table id="customers" className="table table-hover" style={{marginTop:'50px',backgroundColor:'white',float:'center',width:'1200px'}} > 
           <thead>
             <tr >
             <th scope="col">Index</th>
@@ -113,6 +118,9 @@ render(){
 
           <tbody>
               {this.state.topics.map((topics,index)=>( //used salaries array variable
+
+
+
                 <tr key={index} style={{}}>
                   <th scope="row">{index+1}</th>  
                   <td>
@@ -180,6 +188,7 @@ render(){
     )
   }
 }
+
 
 
 
