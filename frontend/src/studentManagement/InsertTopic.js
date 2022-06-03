@@ -89,6 +89,7 @@ constructor(props){
         
             axios.post("/topic/save",data).then((res) =>{ 
                 if(res.data.success){ 
+                    alert("Topic Registered Successfully")
                     this.setState( 
                         {
                           GroupId:"",
@@ -167,7 +168,11 @@ constructor(props){
                         
                  
 
+<<<<<<< Updated upstream:frontend/src/studentManagement/InsertTopic.js
 <h style={{color:'red'}} >once the topic is submitted, it will not be able to change again until you get a feedback.</h>
+=======
+<h style={{color:'red'}} >once the topic is submitted, it will not be able to change again until you get a feedback.Your are able to register maximum 3 topics only</h>
+>>>>>>> Stashed changes:frontend/src/studentManagement/components/InsertTopic.js
                 
                        <div>
                        <center>

@@ -63,8 +63,11 @@ app.use(logresRoute);
  const customersRoute = require('./routes/customers');
 app.use(customersRoute);
 
+<<<<<<< Updated upstream
 const employeesRoute = require('./routes/employees');
 app.use(employeesRoute);
+=======
+>>>>>>> Stashed changes
 
 
 const aRoute = require('./routes/a');
@@ -72,8 +75,22 @@ app.use(aRoute);
 
 
 
+<<<<<<< Updated upstream
 const topicsRoute = require('./routes/Topics');
 app.use(topicsRoute);
+=======
+// Connect to mongodb
+const URI = process.env.ATLAS_URI
+mongoose.connect(URI, {
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}, err => {
+    if(err) throw err;
+    console.log("Connected to mongodb")
+})
+>>>>>>> Stashed changes
 
 const topicdocsRoute = require('./routes/TopicDocs');
 app.use(topicdocsRoute);
