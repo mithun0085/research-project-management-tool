@@ -48,8 +48,19 @@ app.use(emarksRoute);
 //video 
 app.use("/videoc", require("./routes/videoc"));
 
+
+const studentRoute=require('./routes/students');
+const { connect } = require("http2");
+app.use(studentRoute);
+
+
 //uploadDoc 
 app.use("/uploadDoc", require("./routes/uploadDoc"));
+
+
+const requestRoute=require('./routes/requests');
+const { connectr } = require("http2");
+app.use(requestRoute);
 
 // Connect to mongodb
 const URI = process.env.ATLAS_URI

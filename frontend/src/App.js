@@ -32,6 +32,13 @@ import InsertRejTopic2 from './studentManagement/components/InsertRejTopic2';
 import TopicDeRej from './studentManagement/components/TopicDeRej';
 import SubmissionRej from './studentManagement/components/SubmissionRej';
 import TopicDocS from './studentManagement/components/TopicDocS';
+import CreateGroup from './studentManagement/components/CreateGroup';
+import View from './studentManagement/components/View';
+import AddSup from './studentManagement/components/AddSup';
+import StudentReport from './studentManagement/components/StudentReport';
+import CreateRequest from './studentManagement/components/CreateRequest';
+import UpdateGroup from './studentManagement/components/UpdateGroup';
+import DisplayGroup from './studentManagement/components/DisplayGroup';
 
 
 import TopicAccept from './supervisorManagement/components/TopicAccept';
@@ -106,7 +113,6 @@ function App() {
         <Route path="/insertRejTopic/:id" component={InsertRejTopic}></Route> 
         <Route path="/insertRejTopic2/:id" component={InsertRejTopic2}></Route> 
         <Route path="/topicDeRej" component={TopicDeRej}></Route>
-        <Route path="/submissionRej" component={SubmissionRej}></Route>
         <Route path="/topicDocS" component={TopicDocS}></Route>
          <Route path="/dMarksView" component={DMarksView}></Route>
 
@@ -123,10 +129,24 @@ function App() {
         <Route path="/videohome" component={VideoHome} />
 
         <Route path="/insertEMarks" component={InsertMarks} />
+
+        <Route path="/Student/create" exact component={CreateGroup} />
+        <Route path="/Student/get" exact component={DisplayGroup} />
+        <Route path="/students/update/:id" exact component={UpdateGroup} />
+        <Route path="/student/request" exact component={CreateRequest} />
+        <Route path="/student/view" exact component={View} />
+        <Route path="/student/add" exact component={AddSup} />
+        <Route path="/student/submissionRej" component={SubmissionRej}></Route>
+        <Route path="/student/report" exact component={StudentReport} />
+
+        
+
+
          <Route path="/presentationEva" component={presentationEva} />
          <Route path="/viewVideo" component={VideoHome1} />
         <Route path="/uploadDocAdd" component={UploadDocAdd} />
         <Route path="/uploadDocs" component={UploadDocS} />
+
         <Body />
       </div>
       <FooterContainer/>

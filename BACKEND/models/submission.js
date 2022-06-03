@@ -7,6 +7,17 @@ const submissionSchema = new mongoose.Schema({
   pdf : {
     type: String,
   },
+  groupId: {
+    type: String,
+  },
+
+  groupName : {
+    type: String,
+  },
+  researchField: {
+    type: String,
+  },
+
   
 cloudinary_id_pdf: {
     type: String,

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { lightBlue,red} from '@material-ui/core/colors';
+import Button from '@material-ui/core/Button';
 
 import React, { Component }  from 'react';
 
@@ -8,6 +10,9 @@ const SubmissionRej = () => {
   const [name, setName] = useState("");
 
   const [pdf, setPdf] = useState([]);
+  const [groupId, setGroupId] = useState("");
+  const [groupName, setGroupName] = useState("");
+  const [researchTopic, setResearchTopic] = useState("");
   // const handleChange = (e) => {
   //   const newStateFiles = [...files, e.target.files];
   //   setFiles(newStateFiles);
@@ -26,6 +31,10 @@ const SubmissionRej = () => {
       const data = new FormData();
 
       data.append("name", name);
+      data.append("groupId", groupId);
+      data.append("groupName", groupName);
+      data.append("researchTopic", researchTopic);
+   
    
       for (var x = 0; x < pdf.length; x++) {
         data.append("uploaded_Image", pdf[x]);
@@ -38,32 +47,64 @@ const SubmissionRej = () => {
       });
       if (res.ok) {
         setName("");
+        setGroupId("");
+        setGroupName("");
+        setResearchTopic("");
+
       
         setPdf(null);
       
         history.replace("/");
+        alert(" Doccument Uploaded  Successfully");
       }
     } catch (error) {
       console.log(error);
     }
   };
 
+  const Report=()=>{
+    history.push(`/student/request`)
+}
+
+
   return (
-    <div style={{ maxWidth: 500, margin: "auto" }}>
-      {/* <pre>{file!=null && file.length}</pre> */}
-      <form onSubmit={upload} encType="multipart/form-data" >
+    <div style={{ color:"blue" }}>
+    {/* <pre>{file!=null && file.length}</pre> */}
+    <form onSubmit={upload} encType="multipart/form-data" align="center"><br></br>
+    <h2>Doccument Submission</h2>
+
   <div className="form-group">  
   <input type="text"  placeholder="Name" value={name} required
    onChange={e=>{setName(e.target.value)}}
    className="form-control"/>
-   </div>
+   </div><br></br>
+   <div className="form-group">  
+  <input type="text"  placeholder="Group Id" value={groupId} required
+   onChange={e=>{setGroupId(e.target.value)}}
+   className="form-control"/>
+   </div><br></br>
 
-Upload Pdf
-<div className="form-group">
+   <div className="form-group">  
+  <input type="text"  placeholder="Group Name" value={groupName} required
+   onChange={e=>{setGroupName(e.target.value)}}
+   className="form-control"/>
+   </div><br></br>
+
+   <div className="form-group">  
+  <input type="text"  placeholder="Research Toipc" value={researchTopic} required
+   onChange={e=>{setResearchTopic(e.target.value)}}
+   className="form-control"/>
+   </div><br></br>
+
+   Upload Pdf
+
+<div className="form-group"><br></br>
     <input type="file" multiple required filename="uploaded_Image"
+    style={{ backgroundColor: lightBlue[600], color: 'white'}}
      className="form-control-file" 
+     
     onChange={e => {setPdf(e.target.files)}}/>
-</div>
+</div><br></br>
 
 
 
@@ -71,9 +112,22 @@ Upload Pdf
   <button className="mt-2" 
   type="submit" 
   variant="primary"
+  style={{ backgroundColor: lightBlue[600], color: 'white'}}
    size="lg">
-   Upload
-   </button>      
+   Upload Files
+   
+   </button>  
+
+  <br></br><br></br>
+   <Button style={{ backgroundColor: lightBlue[600], color: 'white'}}
+                        
+                        onClick={Report}>
+                        Request Supervisors
+                    </Button>
+                   
+                    
+
+     
   </form>
 
       {/* <div className="mb-3">

@@ -252,9 +252,15 @@ function Profile() {
                     <h2>{isAdmin ? "": <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = "/uploadDocs"   style={{textDecoration:'none', color:'white'}}>Download Documents Uploaded By Panel </a></button>}</h2>
                     
                     <h2>{isAdmin ? "": <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = "/submissionRej"   style={{textDecoration:'none', color:'white'}}>Assignments </a></button>}</h2>
+
+                    <h2>{isAdmin ? "": <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = ""   style={{textDecoration:'none', color:'white'}}>Assignment Marks</a></button>}</h2>
+                    <h2>{isAdmin ? "": <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = "/Student/create"   style={{textDecoration:'none', color:'white'}}>Create Student Groups</a></button>}</h2>
+                
+                
+
                     <h2>{isAdmin ? "": <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = "/dMarksView"   style={{textDecoration:'none', color:'white'}}>Assignment Marks</a></button>}</h2>
                     <h2>{isAdmin ? "": <button class="w3-bar-item w3-button w3-indigo" style={{width:'80%'}}><a href = "/addvideoc"   style={{textDecoration:'none', color:'white'}}>Upload Presentation Video</a></button>}</h2>
-                            <h2>{isAdmin ? "": <button class="w3-bar-item w3-button w3-red" style={{width:'80%'}}><a href = "/videohome"   style={{textDecoration:'none', color:'white'}}>Preview Presentation Video</a></button>}</h2>
+
                 
                 </div>
 
