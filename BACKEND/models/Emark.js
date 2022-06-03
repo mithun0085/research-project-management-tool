@@ -2,6 +2,12 @@ const mongoose = require('mongoose');
 
 const emarkSchema = mongoose.Schema({
 
+    groupID: {
+        type : String,
+        required: true
+    },
+
+    
     Emark1: {
         type : Number,
         required: true

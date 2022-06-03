@@ -39,7 +39,7 @@ const TopicDeRej = () => {
       });
       if (res.ok) {
         setName("");
-      
+        alert("Topic Details Document Uploaded Successfully")
         setPdf(null);
       
         history.replace("/");
@@ -59,19 +59,34 @@ const TopicDeRej = () => {
 
 
 <div className="backgrund3">
-              <div class="col-mb-8 mt-4 mx-auto">
+              <div >
                 
                      <center>
-                 
+                  <div class="w3-card-4 w3-margin w3-white"style={{width:'1000px',height:'700px',marginTop:'opx'}} >
 
-  <h1 className="textcenter" style={{marginTop:'5px'}}>Topic Details Document Registration</h1> 
+  <h1 className="textcenter" style={{marginTop:'0px',fontFamily: 'Fantasy'}}>Topic Details Document Registration</h1> 
 
   <hr/>
 
   <br></br>
 
 
+<div>
 
+<h>Upload a pdf file</h>
+  <br></br>
+  <h>File name should be (group_id.pdf)</h>
+  <br></br>
+  <h>Limit to a maximum of 3 pages</h>
+  <br></br>
+  <h>Include relevant Student ID(s) on first page</h>
+  <br></br>
+  <h style={{color:'red'}}>Deadline 23:00 p.m 21st oct 2022</h>
+
+
+
+</div>
+<br></br>
 
 
       <form onSubmit={upload} encType="multipart/form-data" >
@@ -98,6 +113,7 @@ const TopicDeRej = () => {
    Upload
    </button>      
   </form>
+  
 
       {/* <div className="mb-3">
         <input
@@ -122,7 +138,7 @@ const TopicDeRej = () => {
           Submit
         </button>
       </div> */}
-    </center>
+    </div></center>
     </div>
     </div>
     </div>

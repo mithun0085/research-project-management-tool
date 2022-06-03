@@ -78,7 +78,7 @@ handleSearchArea=(e) =>{
 
        
        
-
+       <div class="w3-card-4 w3-margin w3-pale-white"style={{width:'1300px'}} >
 
 
        <div  className="textcenter" style={{marginTop:'40px' }}>
@@ -143,7 +143,7 @@ handleSearchArea=(e) =>{
         </div>
         </div>
         
-
+        </div>
 
         <br></br><br></br><br></br>
 
@@ -162,4 +162,5 @@ handleSearchArea=(e) =>{
     )
   }
 }
+
 

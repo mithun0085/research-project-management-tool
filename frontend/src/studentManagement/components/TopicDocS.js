@@ -57,116 +57,105 @@ handleSearchArea=(e) =>{
 
 render(){ 
     return(
-      <div style={{backgroundColor:'GhostWhite'}}>
-      <div className ="container">
+    
+      <div >
       <div className="row">
         
 
 
 
-      
-           <h4 className="textcenter" style={{marginTop:'40px' ,fontFamily: 'Fantasy' }}>Topic Feedback by Panel</h4>
-      
-       <hr/>
-
-
-
-
-
-
-
- 
      
-   
-
-       
-     
-        <div className="col-lg-3 mt-2 mb-2">
-          
-        <input
-           className = "from-control"  style={{width:'400px', height:'40px',backgroundColor:'white'}}type="search" placeholder="Search by Document Name" name="searchQuery" onChange={this.handleSearchArea}>
-        </input>
-            
-             </div>
-           
-      </div>
 
 
 
-   
-      
+
+
+
+
+
 <center>
-        <table id="customers" className="table table-hover" style={{marginTop:'40px',backgroundColor:'white'}} > 
-          <thead>
-            <tr >
-            <th scope="col">Index</th>
-              <th scope="col">Document Name</th>
-              <th scope="col">Action</th>
-              <th scope="col">Reasomn to rejecct</th>
+       <div class="w3-card-4 w3-margin w3-white"  style={{width:'900px',height:'800px'}} >
+
+
+
+
+       <div style={{marginTop:'6px'}}>
+
+       <center>
+           <h4 className="textcenter" style={{marginTop:'40px' ,fontFamily: 'Fantasy',fontSize:'30px' }}>Topic Feedbacks</h4>
+           </center>
+       <hr/>
+<center>
+<div   style={{width:'900px'}} >
+
+<div class="w3-container w3-sand" style={{width:'900px'}}>
+
+
+
+<h1>Notice</h1>
+<h2>Supervisor Feedback</h2>
+<h>Check daily to get the feedback from supervisor/if topic is rejected need to register again </h>
+<h2>Supervisor Feedback</h2>
+<h>Topic details document should be uploaded by students till it accepted by the panel member / If it is rejecter students have to select a new topic and send it to the supervisor, then send to the panel member</h>
+</div>
+</div>
+</center>
+</div>
+
+
+
+
+     
+             <button type="button" class="w3-btn w3-gray"     style={{ width:'400px',height:'60px'}} ><a href = "/topicSummaryS1"  style={{textDecoration:'none', color:'white'}}> Feedback from Supervisor</a></button>  <br></br><br></br>
+
+   
+      
+
+             <div class="dropdown"> 
+<button class="w3-btn w3-gray"  style={{ width:'400px',height:'60px'}}  ><h style={{textDecoration:'none', color:'white'}}>Feed back from panel member</h></button>
+{this.state.topics.map((topics,index)=>(
+   <tr key={index} >
+   <th style={{color:'white'}}>{index+1}</th>  
+
+<div class="dropdown-content">
+  
+          
+<a href="/topicDeRej" ><h style={{color:'red'}} >{topics.DocName}</h> |<h style={{color:'red'}} > {topics.Action}ed</h> | {topics.Reason}</a>
+         
            
+         </div>    
+       
+         </tr>
+         ) )}
              
-             
-            </tr>
-          </thead>
+             </div>
 
-          <tbody>
-              {this.state.topics.map((topics,index)=>( //used salaries array variable
-                <tr key={index} style={{}}>
-                  <th scope="row">{index+1}</th>  
-                  <td>
-                      
-                      
-                  
-                            {topics.DocName}
-                       
-                            
-                  
-                   </td>  
-                   <td>
-                   
-                       {topics.Action}
-                    
-                 
-                   </td>
-
-                   <td>
-                  
-                       {topics.Reason}
-                     
-                       
-                 
-                   
-                   </td>
-           
-                
-                  
-                  
-              
-                  </tr> 
-                
-                 ) )}
+         
 
 
 
-               </tbody>
-            </table>
-
-
-            <button type="button" class="btn btn-success" ><a href = "/topicDeRej"  style={{textDecoration:'none', color:'white'}}> +</a></button>  <br></br><br></br>
-        </center>
+            
+  
 
        
 
+
+</div>
+
+
+</center>
 
 
 
         </div>
+ 
       </div>
        
      
     )
   }
 }
+
 
 
 

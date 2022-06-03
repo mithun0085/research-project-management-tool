@@ -8,7 +8,7 @@ const uploadDocSchema = new mongoose.Schema({
     type: String,
   },
   
-    doc: {
+    cloud_doc: {
     type: String,
   }
 });

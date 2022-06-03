@@ -16,16 +16,28 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="row">
+    
 
 
       
+<div >
+              <div class="col-mb-8 mt-4 mx-auto">
+                
+                     <center>
+                  
 
-
+  <h1 className="textcenter" style={{marginTop:'5px',fontFamily: 'Fantasy'}}>Topic Details Document Evalution</h1> 
+  <button type="button" class="w3-button w3-purple w3-round-xxlarge"   style={{float:'right',width:'200px',height:'80px'}}><a href = "evaluateTopics"  style={{textDecoration:'none', color:'white'}}> Evaluate</a></button>
+ 
+ <br></br> <br></br> <br></br>
   <hr/>
 
+
+  <div className="row">
+   
+
       {topicrejs?.map((topicrej) => (
-        <div className="col-md-3 card me-3 mt-2 p-0 mb-2 d-flex" key={topicrej._id}>
+        <div className="card bg-light mb-3"key={topicrej._id} style={{marginTop:'5px',fontFamily: 'Fantasy',width:'200px',height:'150px'}}>
          
          
           
@@ -33,25 +45,28 @@ const Home = () => {
           <a href={topicrej.pdf}    style={{color:'blue'}} download>Click to download</a>
           <div className="p-2">
             <h3>{topicrej.name}</h3>
-
+          
           </div>
           
         </div>
+    
       ))}
-      <button type="button" class="btn btn-success"   style={{float:'right',width:'200px',height:'80px'}}><a href = "evaluateTopics"  style={{textDecoration:'none', color:'white'}}> Evaluate</a></button>
+     
     
     
     
     
-    
+    </div>
 
 
 
 
-
-</div>
+    </center>
+    </div>
+    </div>
   );
 };
 
 export default Home;
+
 

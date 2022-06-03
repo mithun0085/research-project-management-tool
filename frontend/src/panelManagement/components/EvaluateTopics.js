@@ -123,9 +123,9 @@ constructor(props){
                   <center>
                  
   
-              
+                  <div class="card bg-light mb-3" style={{width:'700px'}} >
 
-  <h1 className="textcenter" style={{marginTop:'40px',fontFamily: 'Fantasy'}}>Topic Registration</h1>  
+  <h1 className="textcenter" style={{marginTop:'40px',fontFamily: 'Fantasy'}}>Topic Details Documents Evaluation</h1>  
 
 <br></br>
   <div class="card"  >
@@ -149,15 +149,15 @@ constructor(props){
                        <div style={{color:'red',textAlign:'left'}}>{this.state.DocNameerror}</div>
 
 
-                        <div className="form-group" style={{marginBottom:'15px',maxlength:"4"}}>
+                        <div className="form-group" style={{marginBottom:'15px',width:'600px'}}>
                            <label style={{marginBottom:'15px'}} class="form-label" ></label>
                             <input type="text" className="form-control"  placeholder="Enter Document Name" name="DocName" //name also important.
                             value={this.state.DocName} onChange={this.handleInputChange}/>
                         </div>
                       
-                     
+                     <center>
 
-                        <div style={{textAlign:'left',fontFamily:'Times New Roman'}}>
+                        <div style={{fontFamily:'Times New Roman'}}>
 <label class="container1" >Accept the topic
   <input type="radio"   value="Accept" name="Action"   onChange={(rbvalue)=>{this.setState({Action:rbvalue.target.value})}}/>
   <span class="checkmark"></span>
@@ -165,13 +165,14 @@ constructor(props){
 </div>
 
 
-<div style={{textAlign:'left',fontFamily:'Times New Roman'}}>
+<div style={{fontFamily:'Times New Roman'}}>
 <label class="container1">Reject the topic
   <input type="radio"  value="Reject" name="Action"   onChange={(rbvalue)=>{this.setState({Action:rbvalue.target.value})}}/>
   <span class="checkmark"></span>
 </label>
 </div>
 
+</center>
                       
                       
                       
@@ -180,22 +181,19 @@ constructor(props){
                       
                       
                       
-                      
-                        <div className="form-group" style={{marginBottom:'15px'}}>
+                        <div className="form-group" style={{marginBottom:'15px',width:'600px'}}>
                            <label style={{marginBottom:'5px'}} class="form-label"></label>
                             <input type="text" className="form-control" placeholder="Enter the reason to reject" name="Reason" 
                             value={this.state.Reason} onChange={this.handleInputChange}/>
                         </div>
                         
                  
-
-<h style={{color:'red'}} >once the topic is submitted, it will not be able to change again until you get a feedback.Your are able to register maximum 3 topics only</h>
-                
+              
                        <div>
                        <center>
                        <button className="btn btn-success"  type="submit" style={{marginTop:'120px',width:'150px',height:'100px',float: 'center'}} onClick={this.onSubmit}>
                       
-                        &nbsp;save
+                        &nbsp;send
                        </button>
                       </center>
                       
@@ -206,7 +204,7 @@ constructor(props){
 
             
                    
-
+</div>
 
               
 </center>             
@@ -219,3 +217,4 @@ constructor(props){
         )
     }
 }
+

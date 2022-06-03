@@ -48,9 +48,14 @@ app.use(emarksRoute);
 //video 
 app.use("/videoc", require("./routes/videoc"));
 
+
 const studentRoute=require('./routes/students');
 const { connect } = require("http2");
 app.use(studentRoute);
+
+
+//uploadDoc 
+app.use("/uploadDoc", require("./routes/uploadDoc"));
 
 
 const requestRoute=require('./routes/requests');

@@ -16,18 +16,43 @@ const SubmissionEva = () => {
   }, []);
 
   return (
-    <div className="row">
+<div >
+              <div class="col-mb-8 mt-4 mx-auto">
+                
+                     <center>
+                  
+
+  <h1 className="textcenter" style={{marginTop:'5px',fontFamily: 'Fantasy'}}>Assignment Documents Evalution</h1> 
 
 
-      
+  <hr/>
+  <button type="button" class="w3-button w3-light-blue w3-round-xxlarge"   style={{float:'right',width:'200px',height:'80px'}}><a href = "/viewMSchems2"   style={{textDecoration:'none', color:'white', color:'indigo',fontWeight:'bold'}}> Marking Schemes</a></button>
  
-                    
+
+
+  
+        
+        <br></br><br></br><br></br><br></br>
+        <button type="button"  class="w3-button w3-indigo w3-round-xxlarge"  style={{float:'right',width:'200px',height:'80px'}}><a href = "/submissionEva2"  style={{textDecoration:'none', color:'white',fontWeight:'bold'}}> Evaluate</a></button>
       
-    
-      <hr/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div className="row">
     
           {submissions?.map((submission) => (
-            <div className="col-md-3 card me-3 mt-2 p-0 mb-2 d-flex" key={submission._id}>
+            <div  className="card bg-light mb-3" key={submission._id}    style={{marginTop:'5px',fontFamily: 'Fantasy',width:'200px',height:'150px'}}>
              
              
               
@@ -43,23 +68,19 @@ const SubmissionEva = () => {
 
 
         
-          <br></br><br></br><br></br><br></br><br></br>
-          <button type="button" class="btn btn-success"   style={{float:'right',width:'200px',height:'80px'}}><a href = "/submissionEva2"  style={{textDecoration:'none', color:'white'}}> Evaluate</a></button>
         
         
-        
-        
-        
-        
-    
-    
-    
-    
-      
-        </div>
-      
+          </div>
+
+
+
+
+    </center>
+    </div>
+    </div>
       );
     };
 
 export default SubmissionEva;
+
 

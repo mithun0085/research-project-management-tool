@@ -48,29 +48,30 @@ GeneratePDF =()=>{
                 
          
                   <div id="content" style={{marginTop:'20px' }}>
-                    <h4 className="textcenter" > {Name}</h4>
-                  
+                  <center>
+                    <h4 className="textcenter" style={{marginTop:'40px' ,fontFamily: 'Fantasy',fontSize:'30px',width:'400px' }} > {Name}</h4>
+                    </center>
                      <hr/> 
-
+                   
   <center>
         
-                     <table style={{  border:' 1px solid #ddd',textAlign: 'left',  borderCollapse: 'collapse',
-  width: '100%'}}>
-  <tr>
-    <th style={{   backgroundColor: '#04AA6D',color: 'white',   textalign: 'left',padding: '15px',border:' 1px solid #ddd'}}>Criteria</th>
-    <th style={{   backgroundColor: '#04AA6D',color: 'white',   textalign: 'left',padding: '15px',border:' 1px solid #ddd'}}>Marking Distribution</th>
-    <th style={{   backgroundColor: '#04AA6D',color: 'white',  textalign: 'left',padding: '15px',border:' 1px solid #ddd'}}></th>
+                     <table class='ta1' style={{  border:' 1px solid #ddd',textAlign: 'left',  borderCollapse: 'collapse',
+  width: '70%'}}>
+  <tr class='tr3'>
+    <th  class='th3'style={{     textalign: 'left',padding: '15px',border:' 1px solid #ddd'}}>Criteria</th>
+    <th  class='th3'style={{   textalign: 'left',padding: '15px',border:' 1px solid #ddd'}}>Marking Distribution</th>
+    <th  class='th3'style={{    textalign: 'left',padding: '15px',border:' 1px solid #ddd'}}></th>
   </tr>
-  <tr>
-    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left',backgroundColor:'#f2f2f2'}}>{DDescription1}</td>
-    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left',backgroundColor:'#f2f2f2'}}>{DMark1}</td>
-    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left',backgroundColor:'#f2f2f2'}}></td>
+  <tr class='tr3'>
+    <td class='td3'style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left', backgroundColor:'#f2f2f2'}}>{DDescription1}</td>
+    <td  class='td3'style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left',backgroundColor:'#f2f2f2'}}>{DMark1}</td>
+    <td  class='td3'style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left',backgroundColor:'#f2f2f2'}}></td>
 
   </tr>
   <tr>
-    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left',backgroundColor:'#f2f2f2'}}>{DDescription2}</td>
-    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left',backgroundColor:'#f2f2f2'}}>{DMark2}</td>
-    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left',backgroundColor:'#f2f2f2'}}></td>
+    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left'}}>{DDescription2}</td>
+    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left'}}>{DMark2}</td>
+    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left'}}></td>
    
   </tr>
   <tr>
@@ -80,9 +81,9 @@ GeneratePDF =()=>{
 
   </tr>
   <tr>
-    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left',backgroundColor:'#f2f2f2'}}>{DDescription4}</td>
-    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left',backgroundColor:'#f2f2f2'}}>{DMark4}</td>
-    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left',backgroundColor:'#f2f2f2'}}></td>
+    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left'}}>{DDescription4}</td>
+    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left'}}>{DMark4}</td>
+    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left'}}></td>
    
 </tr>
 <tr>
@@ -92,13 +93,24 @@ GeneratePDF =()=>{
    
 </tr>
 <tr>
-    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left',backgroundColor:'#f2f2f2'}}>Total Marks</td>
-    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left',backgroundColor:'#f2f2f2'}}>{DTotal}</td>
+    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left'}}>Total Marks</td>
+    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left'}}>{DTotal}</td>
+    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left'}}></td>
+   
+</tr>
+<tr>
+    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left',backgroundColor:'#f2f2f2'}}>Weight</td>
+    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left',backgroundColor:'#f2f2f2'}}>{DWeight}%</td>
     <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left',backgroundColor:'#f2f2f2'}}></td>
    
 </tr>
-
-
+<tr>
+    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left'}}>Allocated Marks</td>
+    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left'}}>{DTotal}  *  {DWeight}%</td>
+    <td style={{padding: '15px',border:' 1px solid #ddd',textAlign: 'left'}}>{DAllocatedMarks}</td>
+    
+   
+</tr>
 </table>
         </center>
 
@@ -107,7 +119,7 @@ GeneratePDF =()=>{
 </div>
 <br></br><br></br>
 
-<button className="btn3 button3" onClick={this.GeneratePDF} type="primary">Print the Marking Scheme</button>
+<button className="fa fa-download" style={{fontSize:'20px',color:'black',marginLeft:'250px'}}onClick={this.GeneratePDF} type="primary">Print the Marking Scheme</button>
 </div>
 
 
