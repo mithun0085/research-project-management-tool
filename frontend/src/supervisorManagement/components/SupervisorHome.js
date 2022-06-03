@@ -8,28 +8,27 @@ export default class SupervisorHome extends Component{
 render(){
         return(
             
-          <div className="bacground1">
-          <h4  className="textcenter" style={{marginTop:'40px' ,fontFamily: 'Fantasy' }} >Supervisor</h4>
-          <hr/>
+          <div >
+            <center>
+          <h4  className="textcenter" style={{marginTop:'10px' ,fontFamily: 'Fantasy' ,fontSize:'60px'}} >Supervisor</h4>
+          </center>
+        
    
-          <div class="d-grid gap-2" >
+          <div  >
  <div>      
 
 
 
- <div class="btn-group-vertical"   >
+ <div  class="container" >
+ <img height="600px" width="1500px" style={{marginTop:'25px' }} src={'/static/images/supervisor.jpg'}/>
+<button type="button" class="btn"  style={{top:'40%',left:'50%'}}><a href = "/topicAccept"  >Research Topics</a></button>
 
-<button type="button" class="btn btn-warning"  ><a href = "/topicAccept"  style={{textDecoration:'none', color:'white'}}>Research Topics</a></button>
-
-<button type="button" class="btn btn-dark" ><a href = "/submissionEva"  style={{textDecoration:'none', color:'white'}}> Assignment Evaluation</a></button>
+<button type="button" class="btn" style={{top:'30%',left:'40%'}}><a href = "/submissionEva"  > Assignment Evaluation</a></button>
 
 
  </div>
    
-<center>
-         
-          <img height="350px" width="800px" src={'/static/images/payment2.jpg'}/>
-</center>
+
 
 
          </div>

@@ -8,39 +8,24 @@ export default class PanelHome extends Component{
 render(){
         return(
             
-          <div className="bacground1">
-          <h1 className="textcenter" >Panel Member</h1>
-          <hr/>
+          <div >
+
+        
    
-          <div class="d-grid gap-2" >
+          <div >
  <div>      
 
 
 
- <div class="btn-group-vertical"   >
-
-  <button type="button" class="btn btn-warning"  ><a href = "/home"  style={{textDecoration:'none', color:'white'}}>Evaluate Topics</a></button>
-          <button type="button" class="btn btn-warning"  ><a href = "/presentationEva"  style={{textDecoration:'none', color:'white'}}>Evaluate Presentation</a></button>
-  
-  
- 
- </div>
 
 
-
-
-
-
-
-
-
-
-
-   
 <center>
-         
-          <img height="350px" width="800px" src={'/static/images/payment2.jpg'}/>
-</center>
+ <h4  className="textcenter" style={{marginTop:'10px' ,fontFamily: 'Fantasy' ,fontSize:'60px'}} >Panel Member</h4>
+
+ </center>
+
+
+
 
 
          </div>
@@ -52,7 +37,22 @@ render(){
           
           
           
-          </div></div>
+          </div>
+          
+          
+          <div class="container">
+          <img height="600px" width="1500px" style={{marginTop:'25px'}} src={'/static/images/panelhome.png'}/>
+  
+          <button  class="btn" style={{top:'40%',left:'50%'}} ><a href = "/home"  >Evaluate Topics</a></button>
+   
+
+
+          <button  class="btn" style={{top:'30%',left:'40%'}} ><a href = "/presentationEva"  >Evaluate Presentation</a></button>
+  
+  
+</div>
+
+</div>
 
 
 

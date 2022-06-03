@@ -108,3 +108,34 @@ th3 {
 tr3:nth-child(even) {
   background-color: #dddddd;
 }
+
+/****************************************************************************************/
+
+.container {
+  position: relative;
+
+}
+
+
+
+.container .btn {
+  position: absolute;
+
+
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  width: 400px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
+}

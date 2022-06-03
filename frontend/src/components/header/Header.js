@@ -41,6 +41,7 @@ function Header() {
                 <li><Link to="/profile">Profile</Link></li>
                 <li><Link to="/video">Video Chat</Link></li>
                 <li><Link to="/chat">Live Chat</Link></li>
+               <li> <a href="https://research-project-chat.herokuapp.com/chats">Advanced Chat</a></li>
                
           
              
