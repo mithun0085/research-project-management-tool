@@ -45,6 +45,10 @@ import SubmissionEva2 from './supervisorManagement/components/SubmissionEva2';
 
 import VideoHome from "./Pages/VideoHome";
 import AddVideoc from "./Pages/AddVideoc";
+import presentationEva from './panelManagement/components/presentationEva';
+import UploadDocAdd from "./studentManagement/components/UploadDocAdd";
+import UploadDocS from './supervisorManagement/components/UploadDocS';
+import VideoHome1 from './panelManagement/components/viewVideo';
 
 function App() {
   const dispatch = useDispatch()
@@ -117,6 +121,10 @@ function App() {
         <Route path="/videohome" component={VideoHome} />
 
         <Route path="/insertEMarks" component={InsertMarks} />
+         <Route path="/presentationEva" component={presentationEva} />
+         <Route path="/viewVideo" component={VideoHome1} />
+        <Route path="/uploadDocAdd" component={UploadDocAdd} />
+        <Route path="/uploadDocs" component={UploadDocS} />
         <Body />
       </div>
       <FooterContainer/>

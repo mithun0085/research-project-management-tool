@@ -110,12 +110,12 @@ function VideoConference() {
 		<div className="container">
 			<div className="video-container">
 				<div className="video">
-					{stream &&  <video playsInline muted ref={myVideo} autoPlay style={{ width: "400px" }} />}
+					{stream &&  <video playsInline muted ref={myVideo} autoPlay style={{ width: "300px" }} />}
 				</div>
                 
 				<div className="video">
 					{callAccepted && !callEnded ?
-					<video playsInline ref={userVideo} autoPlay style={{ width: "400px"}} />:
+					<video playsInline ref={userVideo} autoPlay style={{ width: "300px"}} />:
 					null}
 				</div>
 			</div>
@@ -131,7 +131,7 @@ function VideoConference() {
 				/>
 				<CopyToClipboard text={me} style={{ marginBottom: "2rem" }}>
 					<Button variant="contained" color="primary" startIcon={<AssignmentIcon fontSize="large" />}>
-						Copy ID
+						Copy Your ID
 					</Button>
 				</CopyToClipboard>
 

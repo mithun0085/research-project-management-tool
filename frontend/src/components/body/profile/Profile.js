@@ -247,12 +247,13 @@ function Profile() {
                     </table>
                     <h2>{isAdmin ?  <button class="w3-bar-item w3-button w3-indigo" style={{width:'80%'}}><a href = "/createDocMSch"   style={{textDecoration:'none', color:'white'}}>Create Marking Schems</a></button>: <button class="w3-bar-item w3-button w3-indigo" style={{width:'80%'}}><a href = "/insertTopic"   style={{textDecoration:'none', color:'white'}}>Topic registration</a></button>}</h2>
                     <h2>{isAdmin ? <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = "/viewMSchems"   style={{textDecoration:'none', color:'white'}}>Edit/Delete Marking Schems</a></button> : <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = "/topicSummaryS1"   style={{textDecoration:'none', color:'white'}}>Topic Feedback by Supervisors</a></button>}</h2>
-                    <h2>{isAdmin ? "": <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = "/topicDeRej"   style={{textDecoration:'none', color:'white'}}>Topic Details Registration</a></button>}</h2>
+                    <h2>{isAdmin ? <button class="w3-bar-item w3-button w3-red" style={{width:'80%'}}><a href = "/uploadDocAdd"   style={{textDecoration:'none', color:'white'}}>Upoad Documents/Templates</a></button> : <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = "/topicDeRej"   style={{textDecoration:'none', color:'white'}}>Topic Details Registration</a></button>} </h2>
+                    <h2>{isAdmin ? "": <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = "/uploadDocs"   style={{textDecoration:'none', color:'white'}}>Download Documents Uploaded By Panel </a></button>}</h2>
                     <h2>{isAdmin ? "": <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = "/topicDocS"   style={{textDecoration:'none', color:'white'}}>Topic Evalution by panel </a></button>}</h2>
                     <h2>{isAdmin ? "": <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = "/submissionRej"   style={{textDecoration:'none', color:'white'}}>Assignments </a></button>}</h2>
                     <h2>{isAdmin ? "": <button class="w3-bar-item w3-button w3-light-blue" style={{width:'80%'}}><a href = ""   style={{textDecoration:'none', color:'white'}}>Assignment Marks</a></button>}</h2>
-                
-                
+                    <h2>{isAdmin ? "": <button class="w3-bar-item w3-button w3-indigo" style={{width:'80%'}}><a href = "/addvideoc"   style={{textDecoration:'none', color:'white'}}>Upload Presentation Video</a></button>}</h2>
+                            <h2>{isAdmin ? "": <button class="w3-bar-item w3-button w3-red" style={{width:'80%'}}><a href = "/videohome"   style={{textDecoration:'none', color:'white'}}>Preview Presentation Video</a></button>}</h2>
                 
                 </div>
 

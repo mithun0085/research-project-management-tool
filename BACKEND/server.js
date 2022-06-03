@@ -48,7 +48,8 @@ app.use(emarksRoute);
 //video 
 app.use("/videoc", require("./routes/videoc"));
 
-
+//uploadDoc 
+app.use("/uploadDoc", require("./routes/uploadDoc"));
 
 // Connect to mongodb
 const URI = process.env.ATLAS_URI
